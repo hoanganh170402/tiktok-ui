@@ -1,6 +1,5 @@
-function Alert(title)
-{
-    return alert(title)
+function Alert(title) {
+    return alert(title);
 }
 
-export default Alert
+export default Alert;
