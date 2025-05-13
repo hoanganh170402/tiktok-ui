@@ -3,6 +3,10 @@
 
 $primaryColor: #ea284e;
 
+*{
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
 }
