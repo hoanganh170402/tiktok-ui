@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 10px 0px;
+    justify-content: center;
+    height: var(--default-layout-header-height);
+    width: 100%;
+}
+
+.content{
+    background-color: #ccc;
+    width: var(--default-layout-width);
+}
+

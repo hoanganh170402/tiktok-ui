@@ -1,7 +1,17 @@
 @import 'normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
-$primaryColor: #ea284e;
+:root{
+    --primary-color: #ea284e;
+    --default-layout-header-height: 6rem;
+    --default-layout-width: 1150px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html {
     font-size: 62.5%;
