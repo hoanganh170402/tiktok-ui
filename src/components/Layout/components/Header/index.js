@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faMagnifyingGlass, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css'; // optional
 
@@ -9,6 +9,7 @@ import styles from './Header.module.scss';
 import img from '~/assets/images';
 import { PopperWrapper } from '~/components/Popper';
 import AcctountItem from '~/components/AccountItem';
+import Button from '~/components/Button'
 
 const cx = classNames.bind(styles);
 
@@ -31,13 +32,13 @@ function Header() {
                     interactive
                     render={(attrs) => (
                         <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                            <PopperWrapper>
+                            {/* <PopperWrapper>
                                 <h4 className={cx('search-title')}>Accounts</h4>
                                 <AcctountItem />
                                 <AcctountItem />
                                 <AcctountItem />
                                 <AcctountItem />
-                            </PopperWrapper>
+                            </PopperWrapper> */}
                         </div>
                     )}
                 >
@@ -52,7 +53,12 @@ function Header() {
                         </button>
                     </div>
                 </Tippy>
-                <div className={cx('actions')}></div>
+                <div className={cx('actions')}>
+                    <Button text>Upload</Button>
+                    <Button primary rightIcon={<FontAwesomeIcon icon={faArrowRightToBracket} />}>
+                        Login
+                    </Button>
+                </div>
             </div>
         </header>
     );
