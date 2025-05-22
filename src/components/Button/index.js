@@ -50,7 +50,7 @@ function Button({
 
     // console.log('className:', className)
 
-    console.log('leftIcon:', leftIcon);
+    // console.log('leftIcon:', leftIcon);
 
     const classes = cx('wrapper', {
         primary,
