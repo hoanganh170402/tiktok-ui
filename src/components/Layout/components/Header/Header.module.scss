@@ -23,7 +23,8 @@ $widthSearchBtn: 52px;
 .logo {
 }
 
-.search-result, .search{
+.search-result,
+.search {
     width: 500px;
 }
 
@@ -63,7 +64,7 @@ $widthSearchBtn: 52px;
     }
 }
 
-.search-title{
+.search-title {
     padding: 5px 12px;
     font-size: 1.4rem;
     line-height: 18px;
@@ -98,7 +99,6 @@ $widthSearchBtn: 52px;
     &:hover {
         cursor: pointer;
     }
-    
 
     &:active {
         background: rgba(22, 24, 35, 0.06);
@@ -111,5 +111,16 @@ $widthSearchBtn: 52px;
     .search-icon {
         color: rgba(22, 24, 35, 0.34);
         font-size: 2rem;
+    }
+}
+
+// More button
+.more-btn {
+    background-color: transparent;
+    font-size: 2rem;
+    padding: 4px 10px;
+    margin-left: 20px;
+    &:hover {
+        cursor: pointer;
     }
 }

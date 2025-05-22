@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 html {
@@ -21,7 +22,6 @@ html {
 }
 
 body {
-    font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
@@ -36,5 +36,5 @@ input,
 
 a[href] {
     text-decoration: none;
-    // color: var(--text-color)
+    color: var(--text-color);
 }
