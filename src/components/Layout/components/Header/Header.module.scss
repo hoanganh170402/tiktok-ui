@@ -18,6 +18,7 @@ $widthSearchBtn: 52px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 var(--default-layout-horizontal-spacer);
 }
 
 .logo {
@@ -119,6 +120,5 @@ $widthSearchBtn: 52px;
     margin-left: 20px;
     padding: 4px 10px;
     background-color: transparent;
-    cursor:pointer;
+    cursor: pointer;
 }
-

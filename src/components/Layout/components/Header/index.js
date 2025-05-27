@@ -14,8 +14,6 @@ import { useState, useEffect } from 'react';
 
 import styles from './Header.module.scss';
 import img from '~/assets/images';
-import { Wrapper as PopperWrapper } from '~/components/Popper';
-import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 
@@ -27,6 +25,51 @@ const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
         title: 'English',
+        children: {
+            title: 'Language',
+            data: [
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English', // United States, Canada, Australia, etc.
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt', // Vietnam
+                },
+                {
+                    type: 'language',
+                    code: 'fi',
+                    title: 'Suomi', // Finland
+                },
+                {
+                    type: 'language',
+                    code: 'no',
+                    title: 'Norsk', // Norway
+                },
+                {
+                    type: 'language',
+                    code: 'se',
+                    title: 'Svenska', // Sweden
+                },
+                {
+                    type: 'language',
+                    code: 'dk',
+                    title: 'Dansk', // Denmark
+                },
+                {
+                    type: 'language',
+                    code: 'ch',
+                    title: 'Schweizerdeutsch', // Switzerland (Swiss German)
+                },
+                {
+                    type: 'language',
+                    code: 'nl',
+                    title: 'Nederlands', // Netherlands
+                },
+            ],
+        },
     },
     {
         icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -46,6 +89,15 @@ function Header() {
             setSearchResult([1, 2, 3, 4]);
         }, 0);
     }, []);
+
+    const handleMenuClick = (menuItems) => {
+        switch (menuItems.type) {
+            case 'language':
+                // logic change language
+                break;
+            default:
+        }
+    };
 
     return (
         <header className={cx('wrapper')}>
@@ -84,7 +136,7 @@ function Header() {
                     <Button primary rightIcon={<FontAwesomeIcon icon={faArrowRightToBracket} />}>
                         Login
                     </Button>
-                    <Menu items={MENU_ITEMS}>
+                    <Menu items={MENU_ITEMS} onChange={handleMenuClick}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </button>
