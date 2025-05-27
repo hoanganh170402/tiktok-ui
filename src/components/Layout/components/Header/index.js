@@ -26,6 +26,51 @@ const items = [
     {
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
         title: 'English',
+        children: {
+            title: 'Language',
+            data: [
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English', // United States, Canada, Australia, etc.
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt', // Vietnam
+                },
+                {
+                    type: 'language',
+                    code: 'fi',
+                    title: 'Suomi', // Finland
+                },
+                {
+                    type: 'language',
+                    code: 'no',
+                    title: 'Norsk', // Norway
+                },
+                {
+                    type: 'language',
+                    code: 'se',
+                    title: 'Svenska', // Sweden
+                },
+                {
+                    type: 'language',
+                    code: 'dk',
+                    title: 'Dansk', // Denmark
+                },
+                {
+                    type: 'language',
+                    code: 'ch',
+                    title: 'Schweizerdeutsch', // Switzerland (Swiss German)
+                },
+                {
+                    type: 'language',
+                    code: 'nl',
+                    title: 'Nederlands', // Netherlands
+                },
+            ],
+        },
     },
     {
         icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -46,6 +91,16 @@ function Header() {
             setSearchResult([1, 2, 3]);
         }, 0);
     }, []);
+
+    const handleOnChange = (item) => {
+        switch (item.type) {
+            case 'language':
+                // logic to change Language
+                break;
+            default:
+        }
+    };
+
     return (
         <header className={cx('wrapper')}>
             <div className={cx('content')}>
@@ -83,7 +138,7 @@ function Header() {
                     <Button primary rightIcon={<FontAwesomeIcon icon={faArrowRightToBracket} />}>
                         Login
                     </Button>
-                    <Menu items={items}>
+                    <Menu items={items} onChange={handleOnChange}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </button>
