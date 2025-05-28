@@ -1,4 +1,4 @@
-$font-width: 600;
+$font-width: 500;
 
 // Menu list
 .menu-list {
@@ -7,7 +7,7 @@ $font-width: 600;
         margin-left: 0;
     }
     a {
-        font-weight: calc($font-width + 100);
+        font-weight: calc($font-width);
     }
 }
 
@@ -21,6 +21,11 @@ $font-width: 600;
     justify-content: flex-start;
     color: var(--text-color);
     line-height: 1.8rem;
+
+    &.separate {
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
+    }
+
     &:hover {
         background-color: rgba(22, 24, 35, 0.03);
     }

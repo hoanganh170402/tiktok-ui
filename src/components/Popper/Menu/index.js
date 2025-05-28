@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 import styles from './Menu.module.scss';
 import MenuItem from './MenuItem';
-
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import Header from './header';
 
@@ -43,16 +42,17 @@ function Menu({ children, items = [], onChange = defaultFn }) {
 
     return (
         <Tippy
-            visible
+            // visible
+            offset={[22,8]}
             placement="bottom-end"
             interactive
-            delay={[250, 250]}
+            delay={[150, 150]}
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
                     <PopperWrapper className={cx('custom-popper')}>
                         {history.length > 1 && (
                             <Header
-                                title="Language"
+                                title={current.title}
                                 onBack={() => {
                                     setHistory((prev) => prev.slice(0, prev.length - 1));
                                 }}
@@ -62,6 +62,9 @@ function Menu({ children, items = [], onChange = defaultFn }) {
                     </PopperWrapper>
                 </div>
             )}
+            onHide={()=> {
+                setHistory(prev => prev.slice(0,1))
+            }}
         >
             {children}
         </Tippy>

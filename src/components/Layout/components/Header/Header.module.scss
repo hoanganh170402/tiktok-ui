@@ -115,10 +115,34 @@ $widthSearchBtn: 52px;
     }
 }
 
+// Actions 
+.actions{
+    display: flex;
+    align-items: center;
+}
+
+
 .more-btn {
     font-size: 2rem;
     margin-left: 20px;
     padding: 4px 10px;
     background-color: transparent;
     cursor: pointer;
+}
+
+.action-btn {
+    padding: 12px;
+    font-size: 2rem;
+    background-color: transparent;
+    color: #161823;
+    cursor: pointer;
+}
+
+.user-ava { 
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 12px;
 }
