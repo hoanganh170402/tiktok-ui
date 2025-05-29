@@ -115,12 +115,11 @@ $widthSearchBtn: 52px;
     }
 }
 
-// Actions 
-.actions{
+// Actions
+.actions {
     display: flex;
     align-items: center;
 }
-
 
 .more-btn {
     font-size: 2rem;
@@ -131,6 +130,8 @@ $widthSearchBtn: 52px;
 }
 
 .action-btn {
+    position: relative;
+    top: 2px;
     padding: 12px;
     font-size: 2rem;
     background-color: transparent;
@@ -138,7 +139,22 @@ $widthSearchBtn: 52px;
     cursor: pointer;
 }
 
-.user-ava { 
+.badge {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    padding: 0px 5px;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: var(--primary-color);
+}
+
+.user-ava {
     width: 32px;
     height: 32px;
     object-fit: cover;

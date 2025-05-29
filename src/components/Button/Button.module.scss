@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     font-size: 1.6rem;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 700;
     padding: 9px 16px;
     min-width: 100px;
@@ -37,12 +38,14 @@
 // icon, title
 .icon + .title,
 .title + .icon {
-    margin-left: 6px;
+    margin-left: 10px;
 }
 
-.icon{
+.icon {
     display: inline-block;
     // width: 20px;
+    position: relative;
+    top: 2px;
 }
 
 // button types
@@ -82,5 +85,3 @@
     min-width: 140px;
     padding: 14px 16px;
 }
-
-
