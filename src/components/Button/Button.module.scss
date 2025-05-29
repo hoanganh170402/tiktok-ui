@@ -4,6 +4,7 @@
     justify-content: center;
     font-size: 1.6rem;
     font-weight: 700;
+    font-family: 'IBM Plex Sans', sans-serif;
     padding: 10px 16px;
     min-width: 100px;
     border-radius: 4px;
@@ -40,6 +41,10 @@
     margin-left: 8px;
 }
 
+.icon {
+    position: relative;
+    top: 2px;
+}
 
 // button types
 .primary {

@@ -17,7 +17,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 html {
@@ -25,6 +24,7 @@ html {
 }
 
 body {
+    font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
@@ -52,7 +52,7 @@ body {
         background-color: rgba(84, 84, 84, 0.92);
     }
 
-    .tippy-arrow:before{
+    .tippy-arrow:before {
         color: rgba(84, 84, 84, 0.92);
     }
 
@@ -60,7 +60,7 @@ body {
         padding: 8px;
     }
 
-    .tippy-box[data-placement^=bottom]>.tippy-arrow:before{
-        top:-8px
+    .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+        top: -8px;
     }
 }

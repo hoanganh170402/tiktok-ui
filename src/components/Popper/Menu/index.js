@@ -33,7 +33,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
                             console.log('item Children:', item.children);
                             setHistory((prev) => [...prev, item.children]);
                         } else {
-                            onChange(item)
+                            onChange(item);
                         }
                     }}
                 />
@@ -44,6 +44,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
         <Tippy
             // visible
             delay={[100, 100]}
+            offset={[15, 8]}
             interactive
             placement="bottom-end"
             render={(attrs) => (

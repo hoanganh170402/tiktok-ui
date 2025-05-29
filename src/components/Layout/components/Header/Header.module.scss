@@ -133,6 +133,8 @@ $widthSearchBtn: 52px;
 }
 
 .action-btn {
+    position: relative;
+    top: 4px;
     padding: 12px;
     font-size: 2rem;
     background-color: transparent;
@@ -140,9 +142,9 @@ $widthSearchBtn: 52px;
     cursor: pointer;
 }
 
-.user-ava { 
-    width: 30px;
-    height: 30px;
+.user-ava {
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     margin-left: 12px;
     object-fit: cover;
