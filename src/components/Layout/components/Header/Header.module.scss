@@ -1,7 +1,5 @@
 // global styles
 $borderRadius: 92px;
-$searchHeight: 46px;
-$searchTopSpacer: 9px;
 $widthSearchBtn: 52px;
 
 .wrapper {
@@ -23,98 +21,6 @@ $widthSearchBtn: 52px;
 
 .logo {
 }
-
-.search,
-.search-result {
-    width: 500px;
-}
-
-.search {
-    display: flex;
-    height: $searchHeight;
-    background-color: rgba(22, 24, 35, 0.06);
-    border-radius: $borderRadius;
-    position: relative;
-    border: 1.5px solid transparent;
-    &:focus-within {
-        border-color: rgba(22, 24, 35, 0.2);
-    }
-
-    input {
-        padding-left: 16px;
-        color: var(--black);
-        background-color: transparent;
-        font-size: 1.6rem;
-        flex: 1;
-        height: 100%;
-        caret-color: var(--primary-color);
-    }
-
-    input:not(:placeholder-shown) ~ .search-btn {
-        color: var(--black);
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        top: $searchTopSpacer;
-        right: $widthSearchBtn;
-        width: 1px;
-        height: calc($searchHeight - $searchTopSpacer * 2);
-        background-color: rgba(22, 24, 35, 0.12);
-    }
-}
-
-.search-title {
-    padding: 5px 12px;
-    font-size: 1.4rem;
-    line-height: 18px;
-    font-weight: 600;
-    color: rgba(22, 24, 35, 0.5);
-}
-
-.clear,
-.loading {
-    position: absolute;
-    right: $widthSearchBtn + 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #a6a7ab;
-    font-size: 1.6rem;
-    cursor: pointer;
-    &:hover {
-        cursor: pointer;
-        opacity: 0.8;
-    }
-}
-
-.loading {
-}
-
-.search-btn {
-    width: $widthSearchBtn;
-    height: 100%;
-    border-top-right-radius: $borderRadius;
-    border-bottom-right-radius: $borderRadius;
-
-    &:hover {
-        cursor: pointer;
-    }
-
-    &:active {
-        background: rgba(22, 24, 35, 0.06);
-    }
-
-    &:hover .search-icon {
-        color: var(--primary-color);
-    }
-
-    .search-icon {
-        color: rgba(22, 24, 35, 0.34);
-        font-size: 2rem;
-    }
-}
-
 // Actions
 .actions {
     display: flex;
