@@ -22,6 +22,9 @@ $widthSearchBtn: 52px;
 }
 
 .logo {
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 // actions

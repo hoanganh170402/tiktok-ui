@@ -22,6 +22,7 @@ import {
 } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -126,9 +127,11 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('content')}>
-                <div className={cx('logo')}>
-                    <img src={img.logo} alt="Logo" />
-                </div>
+                <Link to="/">
+                    <div className={cx('logo')}>
+                        <img src={img.logo} alt="Logo" />
+                    </div>
+                </Link>
                 {/* Search */}
                 <Search />
                 <div className={cx('actions')}>
