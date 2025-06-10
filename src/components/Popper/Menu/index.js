@@ -13,13 +13,13 @@ function Menu({ children, items = [], onChange = defaultFn }) {
     // Phải trùng key là data, khi đó logic mới hoạt động đúng
     const [history, setHistory] = useState([{ data: items }]);
 
-    console.log('History:', history);
+    // console.log('History:', history);
 
     const current = history[history.length - 1];
 
-    console.log('Current:', current);
+    // console.log('Current:', current);
 
-    console.log('Current data:', current.data);
+    // console.log('Current data:', current.data);
 
     const renderItem = () => {
         return current.data.map((item, index) => {

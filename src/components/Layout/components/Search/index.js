@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, use } from 'react';
 import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,6 +8,7 @@ import { PopperWrapper } from '~/components/Popper';
 import AcctountItem from '~/components/AccountItem';
 import styles from './Search.module.scss';
 import { SearchIcon } from '~/components/Icons';
+import { useDebounce } from '~/components/Hook';
 
 const cx = classNames.bind(styles);
 function Search() {
@@ -18,25 +19,27 @@ function Search() {
 
     const inputRef = useRef();
 
+    const debounceValue = useDebounce(searchValue, 500);
+
     useEffect(() => {
-        if (!searchValue.trim()) {
+        if (!debounceValue.trim()) {
             setSearchResult([]);
             return;
         }
 
-        setLoading(true)
+        setLoading(true);
 
-        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(searchValue)}&type=less`)
+        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debounceValue)}&type=less`)
             .then((res) => res.json())
             .then((res) => {
                 setSearchResult(res.data);
-                setLoading(false)
+                setLoading(false);
             })
-            .catch(err => {
-                console.log(err)
-                setLoading(false)
-            })
-    }, [searchValue]);
+            .catch((err) => {
+                console.log(err);
+                setLoading(false);
+            });
+    }, [debounceValue]);
 
     // handle logic
     const handleClear = () => {
