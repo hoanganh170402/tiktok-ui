@@ -13,13 +13,13 @@ const defaultFn = () => {};
 function Menu({ children, items = [], onChange = defaultFn }) {
     const [history, setHistory] = useState([{ data: items }]);
 
-    console.log('history: ', history);
+    // console.log('history: ', history);
 
     const current = history[history.length - 1];
 
-    console.log('current: ', current);
+    // console.log('current: ', current);
 
-    console.log('current.data: ', current.data);
+    // console.log('current.data: ', current.data);
 
     const renderItems = () => {
         return current.data.map((item, index) => {
@@ -43,7 +43,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
     return (
         <Tippy
             // visible
-            offset={[22,8]}
+            offset={[22, 8]}
             placement="bottom-end"
             interactive
             delay={[150, 150]}
@@ -62,8 +62,8 @@ function Menu({ children, items = [], onChange = defaultFn }) {
                     </PopperWrapper>
                 </div>
             )}
-            onHide={()=> {
-                setHistory(prev => prev.slice(0,1))
+            onHide={() => {
+                setHistory((prev) => prev.slice(0, 1));
             }}
         >
             {children}
