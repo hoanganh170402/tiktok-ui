@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightToBracket, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import { Link } from 'react-router-dom';
 
 import styles from './Header.module.scss';
 import img from '~/assets/images';
@@ -22,6 +23,7 @@ import {
 } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
+import configRoutes from '~/config/routes';
 
 const cx = classNames.bind(styles);
 
@@ -127,9 +129,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('content')}>
-                <div className={cx('logo')}>
+                <Link to={configRoutes.home} className={cx('logo-link')}>
                     <img src={img.logo} alt="Logo" />
-                </div>
+                </Link>
                 <Search />
                 <div className={cx('actions')}>
                     {currentUser ? (
@@ -164,7 +166,7 @@ function Header() {
                             <Image
                                 className={cx('user-ava')}
                                 alt="Lan la con trai"
-                                src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/d427cb356d6b2d79005fde9f642f3d7a~tplv-tiktokx-cropcenter:300:300.webp?dr=14577&refresh_token=702e05df&x-expires=1747900800&x-signature=JIYUVL7soCKlWaIJnFrErkHb900%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=c1333099&idc=my"
+                                src={img.avaDefault}
                                 // fallback="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/985c6458739b1d46c0d502baac21734c~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=a32fe6df&x-expires=1748674800&x-signature=PTn%2BHj9bJyANZESa9tRw%2FngcsU0%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my"
                             />
                         ) : (

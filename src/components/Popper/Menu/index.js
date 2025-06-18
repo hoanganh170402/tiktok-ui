@@ -10,7 +10,7 @@ import Header from './header';
 const cx = classNames.bind(styles);
 const defaultFn = () => {};
 
-function Menu({ children, items = [], onChange = defaultFn }) {
+function Menu({ children, items = [], hideOnClick='false', onChange = defaultFn }) {
     const [history, setHistory] = useState([{ data: items }]);
 
     // console.log('history: ', history);
@@ -47,6 +47,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
             placement="bottom-end"
             interactive
             delay={[150, 150]}
+            hideOnClick={hideOnClick}
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
                     <PopperWrapper className={cx('custom-popper')}>
