@@ -9,7 +9,7 @@ import Header from './header';
 
 const cx = classNames.bind(styles);
 const defaultFn = () => {};
-function Menu({ children, items = [], onChange = defaultFn }) {
+function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn }) {
     // Phải trùng key là data, khi đó logic mới hoạt động đúng
     const [history, setHistory] = useState([{ data: items }]);
 
@@ -47,6 +47,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
             offset={[15, 8]}
             interactive
             placement="bottom-end"
+            hideOnClick={hideOnClick}
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
                     <PopperWrapper className={cx('custom-popper')}>

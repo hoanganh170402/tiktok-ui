@@ -1,9 +1,10 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightToBracket, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
-
+import { Link } from 'react-router-dom';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional
+
 import styles from './Header.module.scss';
 import img from '~/assets/images';
 import Button from '~/components/Button';
@@ -22,7 +23,7 @@ import {
 } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
-import { Link } from 'react-router-dom';
+import configRoutes from '~/config/routes';
 
 const cx = classNames.bind(styles);
 
@@ -127,10 +128,8 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('content')}>
-                <Link to="/">
-                    <div className={cx('logo')}>
-                        <img src={img.logo} alt="Logo" />
-                    </div>
+                <Link to={configRoutes.home} className={cx('logo-link')}>
+                    <img src={img.logo} alt="Logo" />
                 </Link>
                 {/* Search */}
                 <Search />
@@ -167,7 +166,7 @@ function Header() {
                             <Image
                                 className={cx('user-ava')}
                                 alt="lanlacontrai"
-                                src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/d427cb356d6b2d79005fde9f642f3d7a~tplv-tiktokx-cropcenter:300:300.webp?dr=14577&refresh_token=30561fe9&x-expires=1747915200&x-signature=AUzoEW6hF3pKEow7SnxJPVtyDa0%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=c1333099&idc=my"
+                                src={img.defauleAvatar}
                                 // fallBack="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/985c6458739b1d46c0d502baac21734c~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=292be447&x-expires=1748682000&x-signature=Xx8vcE54%2BjNaH78TVCAJdeqOjtg%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my"
                             />
                         ) : (
