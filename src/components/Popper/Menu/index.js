@@ -10,7 +10,7 @@ import Header from './header';
 const cx = classNames.bind(styles);
 const defaultFn = () => {};
 
-function Menu({ children, items = [], hideOnClick='false', onChange = defaultFn }) {
+function Menu({ children, items = [], hideOnClick = 'false', onChange = defaultFn }) {
     const [history, setHistory] = useState([{ data: items }]);
 
     // console.log('history: ', history);
@@ -59,7 +59,7 @@ function Menu({ children, items = [], hideOnClick='false', onChange = defaultFn 
                                 }}
                             />
                         )}
-                        {renderItems()}
+                        <div className={cx('menu-body')}>{renderItems()}</div>
                     </PopperWrapper>
                 </div>
             )}
