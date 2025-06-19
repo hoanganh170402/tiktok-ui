@@ -30,7 +30,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
                     key={index}
                     onClick={() => {
                         if (isParent) {
-                            console.log('item Children:', item.children);
+                            // console.log('item Children:', item.children);
                             setHistory((prev) => [...prev, item.children]);
                         } else {
                             onChange(item);
@@ -61,7 +61,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
                                 }}
                             />
                         )}
-                        {renderItem()}
+                        <div className={cx('menu-body')}>{renderItem()}</div>
                     </PopperWrapper>
                 </div>
             )}

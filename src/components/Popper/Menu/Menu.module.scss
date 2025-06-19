@@ -34,20 +34,25 @@ $fontWidth: 500;
     padding-bottom: 8px;
 }
 
+.menu-body {
+    overflow-y: auto;
+}
+
 // Header Menu
 .header {
     position: relative;
     height: 50px;
     margin-top: -8px;
+    flex-shrink: 0;
 }
 
 .back-btn {
-    position:absolute;
+    position: absolute;
     top: 2px;
     width: 50px;
     height: 100%;
     background-color: transparent;
-    &:hover{
+    &:hover {
         background-color: rgba(22, 24, 35, 0.03);
         cursor: pointer;
     }
