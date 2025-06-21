@@ -23,7 +23,7 @@ import {
 } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
-import configRoutes from '~/config/routes';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -128,7 +128,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('content')}>
-                <Link to={configRoutes.home} className={cx('logo-link')}>
+                <Link to={config.routes.home} className={cx('logo-link')}>
                     <img src={img.logo} alt="Logo" />
                 </Link>
                 {/* Search */}
