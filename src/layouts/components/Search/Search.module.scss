@@ -23,6 +23,7 @@ $widthSearchBtn: 52px;
     input {
         padding-left: 16px;
         color: var(--black);
+        padding-right: 40px;
         background-color: transparent;
         font-size: 1.4rem;
         flex: 1;
@@ -74,7 +75,7 @@ $widthSearchBtn: 52px;
 
 @keyframes spinning {
     from {
-        transform:translateY(-50%) rotate(0);
+        transform: translateY(-50%) rotate(0);
     }
     to {
         transform: translateY(-50%) rotate(360deg);

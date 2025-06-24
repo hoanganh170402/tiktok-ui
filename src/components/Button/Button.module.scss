@@ -3,16 +3,16 @@
     align-items: center;
     justify-content: center;
     font-size: 1.6rem;
-    font-weight: 700;
     font-family: var(--font-family);
-
-    padding: 10px 16px;
+    font-weight: 700;
+    padding: 8px 16px;
     min-width: 100px;
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid transparent;
     background-color: var(--white);
     user-select: none;
+    line-height: 1.5;
 
     // Cách css nếu 2 nút cạnh nhau
     & + .wrapper {
@@ -39,12 +39,14 @@
 // icon, title
 .icon + .title,
 .title + .icon {
-    margin-left: 8px;
+    margin-left: 4px;
 }
 
 .icon {
+    display: inline-block;
+    // width: 20px;
     position: relative;
-    top: 2px;
+    top: 1px;
 }
 
 // button types

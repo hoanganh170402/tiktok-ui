@@ -114,7 +114,7 @@ const userMenu = [
 ];
 
 function Header() {
-    const currentUser = true;
+    const currentUser = false;
 
     const handleOnChange = (item) => {
         switch (item.type) {

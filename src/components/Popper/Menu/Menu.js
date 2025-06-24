@@ -21,6 +21,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
 
     // console.log('Current data:', current.data);
 
+    // Handle logic
     const renderItem = () => {
         return current.data.map((item, index) => {
             const isParent = !!item.children;
@@ -40,6 +41,26 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
             );
         });
     };
+
+    const handleBack = () => {
+        // Logic đoạn này là lầy từ phần tử đầu tiên đến phần tử kế cuối, xoá đi phần tử cuối cùng của mảng
+        setHistory((prev) => prev.slice(0, prev.length - 1));
+    };
+
+    const renderResult = (attrs) => (
+        <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
+            <PopperWrapper className={cx('custom-popper')}>
+                {/* Bạn đã nhấn vào một item có children, nên history đã được push thêm menu con. Nghĩa là history.length > 1 => sẽ xuất hiện nút back */}
+                {history.length > 1 && <Header title={current.title} onBack={handleBack} />}
+                <div className={cx('menu-body')}>{renderItem()}</div>
+            </PopperWrapper>
+        </div>
+    );
+
+    const handleReset = () => {
+        setHistory((prev) => prev.slice(0, 1));
+    };
+
     return (
         <Tippy
             // visible
@@ -48,23 +69,8 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
             interactive
             placement="bottom-end"
             hideOnClick={hideOnClick}
-            render={(attrs) => (
-                <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
-                    <PopperWrapper className={cx('custom-popper')}>
-                        {/* Bạn đã nhấn vào một item có children, nên history đã được push thêm menu con. Nghĩa là history.length > 1 => sẽ xuất hiện nút back */}
-                        {history.length > 1 && (
-                            <Header
-                                title="Language"
-                                onBack={() => {
-                                    // Logic đoạn này là lầy từ phần tử đầu tiên đến phần tử kế cuối, xoá đi phần tử cuối cùng của mảng
-                                    setHistory((prev) => prev.slice(0, prev.length - 1));
-                                }}
-                            />
-                        )}
-                        <div className={cx('menu-body')}>{renderItem()}</div>
-                    </PopperWrapper>
-                </div>
-            )}
+            render={renderResult}
+            onHide={handleReset}
         >
             {children}
         </Tippy>
