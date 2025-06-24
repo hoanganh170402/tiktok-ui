@@ -3,6 +3,7 @@ import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useMemo } from 'react';
 
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
@@ -15,7 +16,7 @@ const cx = classNames.bind(styles);
 function Search() {
     const [searchResult, setSearchResult] = useState([]);
     const [searchValue, setSearchValue] = useState('');
-    const [showResult, setShowResult] = useState(true);
+    const [showResult, setShowResult] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const inputRef = useRef();

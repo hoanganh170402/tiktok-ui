@@ -38,14 +38,14 @@
 // icon, title
 .icon + .title,
 .title + .icon {
-    margin-left: 10px;
+    margin-left: 4px;
 }
 
 .icon {
     display: inline-block;
     // width: 20px;
     position: relative;
-    top: 2px;
+    top: 1px;
 }
 
 // button types
