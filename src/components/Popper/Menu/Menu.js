@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { PopperWrapper } from '~/components/Popper';
 import styles from './Menu.module.scss';
 import MenuItem from './MenuItem';
-import Header from './Header';
+import Header from './header';
 
 const cx = classNames.bind(styles);
 const defaultFn = () => {};

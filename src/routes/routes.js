@@ -1,4 +1,4 @@
-import { Home, Following, Upload, Profile, Search } from '~/pages';
+import { Home, Following, Upload, Profile, Search, Live } from '~/pages';
 import config from '~/config';
 
 // layout
@@ -10,6 +10,8 @@ const publicRoutes = [
     { path: config.routes.upload, component: Upload, layout: HeaderOnly },
     { path: config.routes.profile, component: Profile},
     { path: config.routes.search, component: Search, layout: null },
+    { path: config.routes.live, component: Live },
+    
 ];
 
 const privateRoutes = [];
