@@ -1,0 +1,50 @@
+.wrapper {
+    padding: 18px 20px;
+    width: 340px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ava {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.body {
+    color: var(--text-color);
+    margin: 10px 0;
+}
+
+.nickname {
+    font-size: 1.6rem;;
+}
+
+.check {
+    font-size: 1.4rem;
+    margin-left: 4px;
+    color: var(--check-color);
+}
+
+.name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-op-color);
+}
+
+.analytics {
+}
+
+.value ~ .value {
+    margin-left: 10px;
+}   
+
+.label {
+    margin-left: 4px;
+    color: var(--text-op-color);
+}
