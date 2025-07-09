@@ -4,30 +4,30 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './SuggestedAccounts.module.scss';
-import img from '~/assets/images';
 import AccountPreview from './AccountPreview';
 import { PopperWrapper } from '../Popper';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
-function AccountItem() {
+function AccountItem({ data }) {
     const accountPreview = (props) => (
         <div className={cx('preview')} {...props}>
             <PopperWrapper>
-                <AccountPreview />
+                <AccountPreview data={data} />
             </PopperWrapper>
         </div>
     );
     return (
         <div>
-            <HeadlessTippy interactive delay={[500, 0]} offset={[0,0]} placement="bottom" render={accountPreview}>
+            <HeadlessTippy interactive delay={[500, 0]} offset={[0, 0]} placement="bottom" render={accountPreview}>
                 <div className={cx('account-item')}>
-                    <img className={cx('avatar')} src={img.defauleAvatar} alt="" />
+                    <Image className={cx('avatar')} src={data.avatar} alt="" />
                     <div className={cx('item-info')}>
                         <p className={cx('nickname')}>
-                            <strong>lanlacontrai</strong>
-                            <FontAwesomeIcon className={cx('check')} icon={faCircleCheck} />
+                            <strong>{data.nickname}</strong>
+                            {data.tick ? <FontAwesomeIcon className={cx('check')} icon={faCircleCheck} /> : <></>}
                         </p>
-                        <p className={cx('name')}>Nguyen Quang Lan</p>
+                        <p className={cx('name')}>{`${data.first_name} ${data.last_name}`}</p>
                     </div>
                 </div>
             </HeadlessTippy>
