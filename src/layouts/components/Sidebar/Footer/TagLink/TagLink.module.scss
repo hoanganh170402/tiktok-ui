@@ -1,0 +1,19 @@
+.wrapper {
+    padding-top: 8px;
+}
+
+.title {
+    display: inline-block;
+    color: var(--text-color-blur);
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.2s linear;
+    &:hover {
+        color: var(--text-color);
+        text-decoration: underline;
+    }
+}
+
+.title {
+    padding-right: 5px;
+}

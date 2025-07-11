@@ -4,15 +4,16 @@ import styles from './SuggestAccount.module.scss';
 import AccountItem from './AccountItem';
 
 const cx = classNames.bind(styles);
-function SuggestAccount({ label }) {
+function SuggestAccount({ label, data = [], onShowMore }) {
     return (
         <div className={cx('wrapper')}>
             <p className={cx('label')}>{label}</p>
-            <AccountItem />
-            <AccountItem />
-            <AccountItem />
-
-            <p className={cx('more-btn')}> See all</p>
+            {data.map((account) => (
+                <AccountItem key={account.id} data={account} />
+            ))}
+            <p className={cx('more-btn')} onClick={onShowMore}>
+                {data.length >= 10 ? 'See less' : 'See more'}
+            </p>
         </div>
     );
 }

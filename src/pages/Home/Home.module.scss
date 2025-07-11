@@ -1,0 +1,27 @@
+.wrapper {
+    width: 100%;
+    height: calc(100vh - var(--default-layout-header-height)); /* Mỗi title chiếm đúng 1 màn hình */
+
+    background-color: var(--white);
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    /* Ẩn scrollbar trên Chrome, Safari */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.title {
+    height: calc(100vh - var(--default-layout-header-height)); /* Mỗi title chiếm đúng 1 màn hình */
+    scroll-snap-align: start; /* Snap về phía đầu phần tử */
+    scroll-snap-stop: always; /* Dừng cứng lại ở vị trí snap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 25px 0;
+    background-color: red;
+}
