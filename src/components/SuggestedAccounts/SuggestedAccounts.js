@@ -5,7 +5,6 @@ import AccountItem from './AccountItem';
 const cx = classNames.bind(styles);
 
 function SuggestedAccounts({ label, data = [], onSeeMore }) {
-    console.log(data);
     return (
         <div className={cx('wrapper')}>
             <p className={cx('label')}>{label}</p>

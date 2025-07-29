@@ -1,5 +1,12 @@
 .wrapper {
-    width: 356px;
+    width: 330px;
     padding: 20px 0 26px 8px;
     margin-left: -18px;
+    max-height: calc(100vh - var(--default-layout-header-height));
+    overflow: scroll;
+    scrollbar-width: none;
+    /* Ẩn scrollbar trên Chrome, Safari */
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }

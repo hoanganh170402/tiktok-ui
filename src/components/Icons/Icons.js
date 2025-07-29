@@ -302,6 +302,195 @@ const LiveActiveIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     </svg>
 );
 
+const FollowIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M43 6.08c.7.45 1.06.67 1.25.98.16.27.23.59.2.9-.03.36-.26.72-.7 1.43L23.06 42.14a3.5 3.5 0 0 1-5.63.39L4.89 27.62c-.54-.64-.81-.96-.9-1.32a1.5 1.5 0 0 1 .09-.92c.14-.33.46-.6 1.1-1.14l1.69-1.42c.64-.54.96-.81 1.31-.9.3-.06.63-.04.92.09.34.14.6.46 1.15 1.1l9.46 11.25 18.11-28.7c.45-.72.68-1.07.99-1.26.27-.16.59-.23.9-.2.36.03.71.25 1.43.7L43 6.08Z"
+        ></path>
+    </svg>
+);
+
+const UnFollowIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path d="M26 7a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v15H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h15v15a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V26h15a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H26V7Z"></path>
+    </svg>
+);
+
+const LikeIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        width={width}
+        height={height}
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        className={className}
+        aria-hidden="true"
+        focusable="false"
+        fill="currentColor"
+    >
+        <path d="M7.5 2.25C10.5 2.25 12 4.25 12 4.25C12 4.25 13.5 2.25 16.5 2.25C20 2.25 22.5 4.99999 22.5 8.5C22.5 12.5 19.2311 16.0657 16.25 18.75C14.4095 20.4072 13 21.5 12 21.5C11 21.5 9.55051 20.3989 7.75 18.75C4.81949 16.0662 1.5 12.5 1.5 8.5C1.5 4.99999 4 2.25 7.5 2.25Z" />
+    </svg>
+);
+
+const CommentIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        width={width}
+        height={height}
+        className={className}
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        data-icon="comment-dots"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+        fill="currentColor"
+    >
+        <path d="M256 448c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9c-5.5 9.2-11.1 16.6-15.2 21.6c-2.1 2.5-3.7 4.4-4.9 5.7c-.6 .6-1 1.1-1.3 1.4l-.3 .3c0 0 0 0 0 0c0 0 0 0 0 0s0 0 0 0s0 0 0 0c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c28.7 0 57.6-8.9 81.6-19.3c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9zM128 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm128 0a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm96 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+    </svg>
+);
+
+const BookmarkIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        width={width}
+        height={height}
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        className={className}
+        aria-hidden="true"
+        focusable="false"
+        role="img"
+        data-prefix="custom"
+        data-icon="bookmark"
+    >
+        <path
+            fill="currentColor"
+            d="M4 4.5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v15.13a1 1 0 0 1-1.555.831l-6.167-4.12a.5.5 0 0 0-.556 0l-6.167 4.12A1 1 0 0 1 4 19.63z"
+        />
+        <path
+            fill="currentColor"
+            fillOpacity=".03"
+            d="M4.032 4.144Q4 4.317 4 4.5v15.13a1 1 0 0 0 1.555.831l6.167-4.12a.5.5 0 0 1 .41-.066l-.427-.198a1.49 1.49 0 0 0-1.377.063c-.581.339-1.45.85-2.25 1.339-.59.359-1.427.695-2.187.962-.929.325-1.86-.387-1.86-1.37zm8.251 12.202 6.162 4.115A1 1 0 0 0 20 19.63V4.5a2 2 0 0 0-1.123-1.798c.21.254.334.58.33.936a117 117 0 0 1-.896 13.408c-.124.99-1.17 1.553-2.076 1.133z"
+        />
+    </svg>
+);
+
+const ShareIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        focusable="false"
+        role="img"
+        data-prefix="custom"
+        data-icon="share"
+    >
+        <path
+            fill="currentColor"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M10.938 3.175a.674.674 0 0 1 1.138-.488l6.526 6.215c.574.547.554 1.47-.043 1.991l-6.505 5.676a.674.674 0 0 1-1.116-.508V13.49s-6.985-1.258-9.225 2.854c-.209.384-1.023.518-.857-1.395.692-3.52 2.106-9.017 10.082-9.017z"
+        />
+        <path
+            fill="#161823"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            opacity="0.03"
+            d="m15.754 6.212 1.295 2.59a1.12 1.12 0 0 1-.268 1.349l-5.799 5.042s-.28 1.403.562 1.403 7.578-6.174 7.578-6.174.28-.842-.561-1.684c-.843-.842-2.807-2.526-2.807-2.526"
+        />
+        <path
+            fill="url(#pc-share-078b3fae_a)"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            opacity="0.09"
+            d="M10.937 6.23v7.297s-6.683-.942-8.777 2.246C.146 18.839.331 12.309 3.363 9.057s7.574-2.827 7.574-2.827"
+        />
+        <defs>
+            <radialGradient
+                id="pc-share-078b3fae_a"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientTransform="rotate(-113.046 11.628 5.43) scale(8.93256 8.78076)"
+                gradientUnits="userSpaceOnUse"
+            >
+                <stop />
+                <stop offset="0.995" stopOpacity="0.01" />
+                <stop offset="1" stopOpacity="0.01" />
+            </radialGradient>
+        </defs>
+    </svg>
+);
+
+const MusicIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        width={width}
+        height={height}
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        className={className}
+        aria-hidden="true"
+        focusable="false"
+        role="img"
+        data-prefix="custom"
+        data-icon="music"
+    >
+        <path d="M35 10.76a1 1 0 0 0-1.22-.98l-15.99 3.64a1 1 0 0 0-.78.97V38c.03 2.17-2.2 4.43-5.4 5.28-3.56.96-6.96-.2-7.6-2.57-.63-2.37 1.74-5.07 5.3-6.02a9.2 9.2 0 0 1 3.7-.25V14.39a5 5 0 0 1 3.9-4.87l15.98-3.64A5 5 0 0 1 39 10.76v22.36c.08 2.2-2.17 4.5-5.4 5.36-3.56.95-6.96-.2-7.6-2.57-.63-2.38 1.74-5.08 5.3-6.03a9.2 9.2 0 0 1 3.7-.25z" />
+    </svg>
+);
+
+const TickIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+        aria-hidden="true"
+        focusable="false"
+        role="img"
+        data-prefix="custom"
+        data-icon="tick"
+    >
+        <g clipPath="url(#verified-badge-clip)">
+            <path d="M0 24a24 24 0 1 1 48 0 24 24 0 0 1-48 0Z" fill="#20D5EC" />
+            <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M37.12 15.88a3 3 0 0 1 0 4.24l-13.5 13.5a3 3 0 0 1-4.24 0l-8.5-8.5a3 3 0 1 1 4.24-4.24l6.38 6.38 11.38-11.38a3 3 0 0 1 4.24 0Z"
+                fill="#fff"
+            />
+        </g>
+        <defs>
+            <clipPath id="verified-badge-clip">
+                <path fill="#fff" d="M0 0h48v48H0z" />
+            </clipPath>
+        </defs>
+    </svg>
+);
+
 export {
     UploadIcon,
     MessageIcon,
@@ -320,4 +509,12 @@ export {
     UserGroupActiveIcon,
     LiveIcon,
     LiveActiveIcon,
+    FollowIcon,
+    UnFollowIcon,
+    LikeIcon,
+    CommentIcon,
+    BookmarkIcon,
+    ShareIcon,
+    MusicIcon,
+    TickIcon,
 };

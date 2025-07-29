@@ -13,6 +13,7 @@ import {
 import config from '~/config';
 import SuggestedAccounts from '~/components/SuggestedAccounts';
 import * as userService from '~/services/userService copy';
+import Footer from '../Footer';
 
 const cx = classNames.bind(styles);
 
@@ -56,7 +57,8 @@ function Sidebar() {
                 data={allUsers.slice(0, visibleCount)}
                 onSeeMore={handleSeeMore}
             />
-            <SuggestedAccounts label="Followings Accounts" />
+            
+            <Footer />
         </aside>
     );
 }

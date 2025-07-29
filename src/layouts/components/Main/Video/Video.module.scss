@@ -1,0 +1,170 @@
+.wrapper {
+    height: calc(100vh - var(--default-layout-header-height)); /* Mỗi title chiếm đúng 1 màn hình */
+    scroll-snap-align: start; /* Snap về phía đầu phần tử */
+    scroll-snap-stop: always; /* Dừng cứng lại ở vị trí snap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 16px 170px 16px 64px;
+    // background-color: red;
+    position: relative;
+}
+.video-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: calc(100vh - var(--default-layout-header-height) - 1.5rem);
+}
+
+.video {
+    width: 100%;
+    height: calc(100vh - var(--default-layout-header-height) - 1.5rem);
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.controls {
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 12px 16px;
+}
+
+.nickname {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    display: inline-block;
+    color: #ffffffe6;
+}
+
+.check {
+    width: 14px;
+    height: 14px;
+    margin-left: 8px;
+}
+
+.title {
+}
+
+.title-des {
+}
+
+.music {
+}
+
+.music-name {
+}
+
+.video-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 14%;
+    bottom: 10px;
+}
+
+.video-avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatar-icon {
+    position: absolute;
+    bottom: -36%;
+    left: 30%;
+}
+
+.icon-follow,
+.icon-unFollow {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-follow {
+    color: var(--primary-color);
+    cursor: pointer;
+    background-color: var(--white);
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.icon-unFollow {
+    color: var(--white);
+    background-color: var(--primary-color);
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.info-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #1618230f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.icon-like {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-comment {
+    width: 22px;
+    height: 22px;
+}
+
+.icon-bookmark {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-share {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    left: 2px;
+    bottom: -2px;
+}
+
+.info-count {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #161823bf;
+    text-align: center;
+    font-weight: 600;
+}

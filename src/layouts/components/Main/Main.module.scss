@@ -1,0 +1,42 @@
+$btnWidth: 45px;
+
+.list-container {
+    width: 100%;
+    height: calc(100vh - var(--default-layout-header-height)); /* Mỗi title chiếm đúng 1 màn hình */
+    background-color: var(--white);
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    /* Ẩn scrollbar trên Chrome, Safari */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    padding-right: $btnWidth;
+}
+
+
+.nav-list-btn {
+    width: $btnWidth;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-btn {
+    width: $btnWidth;
+    height: $btnWidth;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    &:hover {
+        cursor: pointer;
+    }
+}

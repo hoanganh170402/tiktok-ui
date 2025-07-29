@@ -12,8 +12,11 @@
 
 .account-item {
     display: flex;
-    padding: 8px;
-    &:hover { 
+    align-items: center;
+    padding: 10px 8px;
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+        border-radius: 4px;
         cursor: pointer;
     }
 }
@@ -33,20 +36,19 @@
 .nickname {
     font-size: 1.6rem;
     color: var(--text-color);
-    font-weight: 800;
-    line-height: 1;
+    line-height: 1.2;
 }
 
 .check {
-    margin-left: 5px;
-    font-size: 1.4rem;
-    color: var(--check-color);
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-left: 6px;
 }
 
 .name {
-    font-size: 1.3rem;
-    font-weight: 300;
     color: var(--text-op-color);
+    font-size: 1.4rem;
+    font-weight: 400;
 }
 
 .more-btn {
