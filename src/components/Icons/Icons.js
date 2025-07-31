@@ -490,7 +490,6 @@ const TickIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
         </defs>
     </svg>
 );
-
 export {
     UploadIcon,
     MessageIcon,

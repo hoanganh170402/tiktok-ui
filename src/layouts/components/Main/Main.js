@@ -19,7 +19,7 @@ function Main() {
         fectAPI();
     }, []);
 
-    console.log(listItem);
+    // console.log(listItem);
     return (
         <>
             <div className={cx('list-container')}>
