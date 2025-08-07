@@ -1,22 +1,29 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useContext } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCirclePlay, faPause, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faPause, faPlay } from '@fortawesome/free-solid-svg-icons';
+import Tippy from '@tippyjs/react/headless'; // different import path!
 
 import {
     BookmarkIcon,
     CommentIcon,
     FollowIcon,
     LikeIcon,
+    MoreIcon,
     MusicIcon,
-    PlayIcon,
+    MuteIcon,
     ShareIcon,
     TickIcon,
     UnFollowIcon,
+    UnMuteIcon,
 } from '~/components/Icons';
 
 import styles from './Video.module.scss';
 import Image from '~/components/Image';
+import { AudioContext } from '~/context/AudioContext';
+import { PopperWrapper } from '~/components/Popper';
+import MenuPreview from './MenuPreview';
+
 const cx = classNames.bind(styles);
 
 function Video({ data }) {
@@ -34,6 +41,12 @@ function Video({ data }) {
 
     // Show icons
     const [showStatusIcon, setShowStatusIcon] = useState(null); // null | 'play' | 'pause'
+
+    // Quản lý trạng thái mute
+    const { isMuted, setIsMuted, volume, setVolume } = useContext(AudioContext);
+
+    // Quản lý hover icon âm lượng
+    const [isHoveringVolume, setIsHoveringVolume] = useState(false);
 
     // Kiểm tra độ dài description
     const maxLength = 40; // Số ký tự tối đa khi thu gọn
@@ -70,6 +83,7 @@ function Video({ data }) {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
+                        videoElement.currentTime = 0;
                         videoElement
                             .play()
                             .then(() => setIsPlaying(true))
@@ -80,7 +94,7 @@ function Video({ data }) {
                     }
                 });
             },
-            { threshold: 0.75 }, // Phát khi 75% video nằm trong màn hình
+            { threshold: 0.75 },
         );
 
         observer.observe(videoElement);
@@ -89,6 +103,20 @@ function Video({ data }) {
             observer.unobserve(videoElement);
         };
     }, []);
+
+    // Xử lý thay đổi âm lượng
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.volume = volume;
+        }
+    }, [volume]);
+
+    // Đồng bộ trạng thái mute của video với context
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.muted = isMuted;
+        }
+    }, [isMuted]);
 
     // Xử lý toggle
     const handleToggle = () => {
@@ -116,15 +144,74 @@ function Video({ data }) {
         }, 300);
     };
 
+    // Xử lý khi click vào thanh progress
+    const handleProgressClick = (e) => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        const progressBar = e.currentTarget;
+        // Lấy ra kích thước và vị trí của thanh progress trong trang.
+        const rect = progressBar.getBoundingClientRect();
+
+        // 👉 Tính khoảng cách từ mép trái của thanh progress đến nơi bạn vừa click.
+        // e.clientX là vị trí click theo trục X tính từ mép trái màn hình.
+        // rect.left là vị trí của thanh progress.
+        // ⇒ clickX là khoảng cách nội bộ trong thanh progress.
+        const clickX = e.clientX - rect.left;
+
+        // Lưu chiều rộng của thanh progress.
+        const width = rect.width;
+
+        // Tính phần trăm vị trí bạn vừa click trên thanh progress.
+        const percent = clickX / width;
+
+        // Tính ra thời điểm video mới cần phát (tính bằng giây).
+        const newTime = percent * video.duration;
+
+        // Gán thời gian phát mới cho video → Video sẽ nhảy đến thời gian đó.
+        video.currentTime = newTime;
+    };
+
+    // Xử lý khi người dùng không tắt tiếng
+    const handleUnmuteClick = () => {
+        const video = videoRef.current;
+        if (!video) return;
+        video.muted = false;
+        setIsMuted(false);
+    };
+
+    // Xử lý khi người dùng tắt tiếng
+    const handleMuteClick = () => {
+        const video = videoRef.current;
+        if (!video) return;
+        video.muted = true;
+        setIsMuted(true);
+    };
+
+    // Xử lý thay đổi âm lượng
+
+    const handleVolumeChange = (e) => {
+        const newVolume = parseFloat(e.target.value);
+        setVolume(newVolume); // Cập nhật volume cho toàn bộ context
+    };
+
+    // Render MenuPreview
+    const menuPreview = (props) => (
+        <PopperWrapper>
+            <MenuPreview />
+        </PopperWrapper>
+    );
+
     return (
         <div className={cx('wrapper')}>
+            {/* Video Player */}
             <div className={cx('video-wrapper')}>
                 <video
                     src={data.file_url}
                     className={cx('video')}
                     ref={videoRef}
                     onClick={handleVideoClick}
-                    muted
+                    loop
                 ></video>
                 {showStatusIcon && (
                     <div className={cx('status-icon')}>
@@ -135,7 +222,47 @@ function Video({ data }) {
                         )}
                     </div>
                 )}
-                <div className={cx('controls')}>controls</div>
+                <div className={cx('controls')}>
+                    <div
+                        className={cx('volume-control')}
+                        onMouseEnter={() => setIsHoveringVolume(true)}
+                        onMouseLeave={() => setIsHoveringVolume(false)}
+                    >
+                        <button className={cx('volume-btn')} onClick={isMuted ? handleUnmuteClick : handleMuteClick}>
+                            {isMuted ? (
+                                <MuteIcon className={cx('volumn-icon')} />
+                            ) : (
+                                <UnMuteIcon className={cx('volumn-icon')} />
+                            )}
+                        </button>
+
+                        <div className={cx('wrapper-input', { show: isHoveringVolume })}>
+                            <input
+                                min="0"
+                                max="1"
+                                step="0.01"
+                                type="range"
+                                className={cx('volume-slider')}
+                                value={volume}
+                                onChange={handleVolumeChange}
+                            />
+                        </div>
+                    </div>
+
+                    <Tippy
+                        placement="right-end"
+                        interactive
+                        delay={[150, 150]}
+                        offset={[-5, 15]}
+                        render={menuPreview}
+                        trigger="click"
+                    >
+                        <button className={cx('menu-btn')}>
+                            <MoreIcon className={cx('menu-icon')} />
+                        </button>
+                    </Tippy>
+                </div>
+
                 <div className={cx('description')}>
                     <div className={cx('wrapper-nickname')}>
                         <h2 className={cx('nickname')}> {data.user.nickname}</h2>
@@ -153,7 +280,7 @@ function Video({ data }) {
                         <MusicIcon className={cx('music-icon')} />
                         <p className={cx('music-name')}>Trending - Breaking News Background Music - Blaze Records</p>
                     </span>
-                    <div className={cx('progress-bar')}>
+                    <div className={cx('progress-bar')} onClick={handleProgressClick}>
                         <div className={cx('progress-bar-inner')} style={{ width: `${progress}%` }}></div>
                     </div>
                 </div>

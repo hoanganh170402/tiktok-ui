@@ -53,6 +53,77 @@
     position: absolute;
     top: 0;
     left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+    padding: 6px 0;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+}
+
+.volume-btn {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+}
+
+.volumn-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.wrapper-input {
+    width: 100px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    background: rgba(22, 24, 35, 0.34);
+    border-radius: 32px;
+    margin: 7px 8px 7px 0px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.volume-slider {
+    appearance: none;
+    width: 80%;
+    height: 2px;
+    background-color: rgb(204, 204, 204);
+    cursor: pointer;
+    margin: auto;
+    border-radius: 16px;
+    outline: none;
+}
+
+.menu-btn {
+    background-color: transparent;
+    color: white;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--btn-hover-color);
+        border-radius: 50%;
+    }
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
 }
 
 .description {
@@ -77,6 +148,10 @@
     line-height: 1.8rem;
     display: inline-block;
     color: var(--text-white-color);
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
 
 .check {
@@ -135,20 +210,33 @@
     font-size: 1.4rem;
     padding-left: 6px;
     font-weight: 500;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
 
 .progress-bar {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 4px;
+    height: 5px;
     overflow: hidden;
     left: 0;
     right: 0;
+    &:hover {
+        cursor: pointer;
+        height: 8px;
+        transition: height 0.2s linear;
+    }
+
+    &:hover .progress-bar-inner {
+        height: 8px;
+    }
 }
 
 .progress-bar-inner {
-    height: 4px;
+    height: 5px;
     background-color: var(--primary-color);
 }
 

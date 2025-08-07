@@ -7,36 +7,40 @@ import { publicRoutes } from '~/routes';
 // Layout
 import { DefaultLayout } from '~/layouts';
 
+import { AudioProvider } from '~/context/AudioContext';
+
 function App() {
     return (
         <div className="App">
-            <Router>
-                <Routes>
-                    {publicRoutes.map((route, item) => {
-                        const Page = route.component;
+            <AudioProvider>
+                <Router>
+                    <Routes>
+                        {publicRoutes.map((route, item) => {
+                            const Page = route.component;
 
-                        let Layout = DefaultLayout;
+                            let Layout = DefaultLayout;
 
-                        if (route.layout) {
-                            Layout = route.layout;
-                        } else if (route.layout === null) {
-                            Layout = Fragment;
-                        }
+                            if (route.layout) {
+                                Layout = route.layout;
+                            } else if (route.layout === null) {
+                                Layout = Fragment;
+                            }
 
-                        return (
-                            <Route
-                                key={item}
-                                path={route.path}
-                                element={
-                                    <Layout>
-                                        <Page />
-                                    </Layout>
-                                }
-                            />
-                        );
-                    })}
-                </Routes>
-            </Router>
+                            return (
+                                <Route
+                                    key={item}
+                                    path={route.path}
+                                    element={
+                                        <Layout>
+                                            <Page />
+                                        </Layout>
+                                    }
+                                />
+                            );
+                        })}
+                    </Routes>
+                </Router>
+            </AudioProvider>
         </div>
     );
 }
