@@ -9,6 +9,8 @@ import { DefaultLayout } from '~/layouts';
 
 import { AudioProvider } from '~/context/AudioContext';
 
+import { ToastContainer } from 'react-toastify';
+
 function App() {
     return (
         <div className="App">
@@ -41,6 +43,7 @@ function App() {
                     </Routes>
                 </Router>
             </AudioProvider>
+            <ToastContainer limit={1} />
         </div>
     );
 }

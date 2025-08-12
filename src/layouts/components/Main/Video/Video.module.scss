@@ -317,6 +317,10 @@
     height: 24px;
 }
 
+.icon-like.liked {
+    color: var(--primary-color);
+}
+
 .icon-comment {
     width: 22px;
     height: 22px;
@@ -325,6 +329,10 @@
 .icon-bookmark {
     width: 24px;
     height: 24px;
+}
+
+.icon-bookmark.bookmarked {
+    color: #face15;
 }
 
 .icon-share {

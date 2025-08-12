@@ -332,7 +332,7 @@ const UnFollowIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     </svg>
 );
 
-const LikeIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+const NonLikeIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     <svg
         width={width}
         height={height}
@@ -634,6 +634,328 @@ const ReportIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     </svg>
 );
 
+const CloseIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        fill="currentColor"
+        color="inherit"
+        fontSize="inherit"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <path d="M38.7 12.12a1 1 0 0 0 0-1.41l-1.4-1.42a1 1 0 0 0-1.42 0L24 21.17 12.12 9.3a1 1 0 0 0-1.41 0l-1.42 1.42a1 1 0 0 0 0 1.41L21.17 24 9.3 35.88a1 1 0 0 0 0 1.41l1.42 1.42a1 1 0 0 0 1.41 0L24 26.83 35.88 38.7a1 1 0 0 0 1.41 0l1.42-1.42a1 1 0 0 0 0-1.41L26.83 24 38.7 12.12Z"></path>
+    </svg>
+);
+
+const ShareLinkIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fontSize="22px"
+        width={width}
+        height={height}
+        className={className}
+        fill="currentColor"
+    >
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path d="M18.3638 15.5355L16.9496 14.1213L18.3638 12.7071C20.3164 10.7545 20.3164 7.58866 18.3638 5.63604C16.4112 3.68341 13.2453 3.68341 11.2927 5.63604L9.87849 7.05025L8.46428 5.63604L9.87849 4.22182C12.6122 1.48815 17.0443 1.48815 19.778 4.22182C22.5117 6.95549 22.5117 11.3876 19.778 14.1213L18.3638 15.5355ZM15.5353 18.364L14.1211 19.7782C11.3875 22.5118 6.95531 22.5118 4.22164 19.7782C1.48797 17.0445 1.48797 12.6123 4.22164 9.87868L5.63585 8.46446L7.05007 9.87868L5.63585 11.2929C3.68323 13.2455 3.68323 16.4113 5.63585 18.364C7.58847 20.3166 10.7543 20.3166 12.7069 18.364L14.1211 16.9497L15.5353 18.364ZM14.8282 7.75736L16.2425 9.17157L9.17139 16.2426L7.75717 14.8284L14.8282 7.75736Z"></path>
+    </svg>
+);
+
+const Reposted = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <path fill="#FFC300" d="M0 0h48v48H0z"></path>
+        <path
+            d="M30.01 22.53v5.22h-3.46a.82.82 0 0 0-.62 1.35l4.56 5.32c.43.5 1.22.5 1.65 0l4.56-5.32a.82.82 0 0 0-.62-1.35h-3.13v-5.28c0-1.14 0-2.36-.07-3.1a5.68 5.68 0 0 0-.57-2.24 5.74 5.74 0 0 0-2.5-2.5c-.7-.36-1.45-.5-2.25-.57-.78-.06-.92-.06-2.07-.06H23.7a.79.79 0 0 0-.78.79v1.36c0 .43.35.78.78.78h1.73c1.22 0 1.25 0 1.89.06.62.05.93.14 1.15.25.53.27.96.7 1.23 1.22.1.18.2.53.25 1.15.05.64.06 1.7.06 2.92ZM17.89 21.2h3.46c.7 0 1.08-.82.63-1.35l-4.56-5.32a1.1 1.1 0 0 0-1.66 0l-4.56 5.32a.82.82 0 0 0 .62 1.35h3.13v5.28c0 1.14.01 2.37.07 3.1.07.84.21 1.54.57 2.24a5.74 5.74 0 0 0 2.5 2.5c.7.36 1.45.5 2.25.57.78.06.92.06 2.07.06h1.79c.43 0 .78-.35.78-.78V32.8a.79.79 0 0 0-.78-.78h-1.73c-1.22 0-1.25 0-1.89-.06a3.04 3.04 0 0 1-1.15-.25 2.8 2.8 0 0 1-1.22-1.22c-.11-.18-.2-.53-.26-1.15-.05-.64-.06-1.7-.06-2.92V21.2Z"
+            fill="#fff"
+        ></path>
+    </svg>
+);
+
+const ActionShareLink = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <g clipPath="url(#Icon_Color-Link_Circle_svg__a)">
+            <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M24 48a24 24 0 1 0 0-48 24 24 0 0 0 0 48Z"
+                fill="#2E75FD"
+            ></path>
+            <path
+                d="M17.1 21.7c.2-.2.52-.2.71 0l1.17 1.17c.2.2.2.51 0 .7l-1.94 1.95a3.85 3.85 0 1 0 5.44 5.45l1.94-1.95c.2-.2.52-.2.71 0l1.17 1.17c.2.2.2.5 0 .7l-1.95 1.95a6.5 6.5 0 0 1-9.19-9.2l1.95-1.94ZM29.02 24.42a.5.5 0 0 0 0 .71l1.17 1.17c.2.2.5.2.7 0l1.95-1.95a6.5 6.5 0 0 0-9.2-9.19l-1.94 1.95a.5.5 0 0 0 0 .7l1.17 1.17c.2.2.51.2.7 0l1.95-1.95a3.85 3.85 0 1 1 5.45 5.45l-1.95 1.94Z"
+                fill="#fff"
+            ></path>
+            <path
+                d="M19.88 26.24a.5.5 0 0 0 0 .71l1.17 1.17c.2.2.51.2.7 0l6.37-6.37a.5.5 0 0 0 0-.7l-1.17-1.17a.5.5 0 0 0-.7 0l-6.37 6.36Z"
+                fill="#fff"
+            ></path>
+        </g>
+        <defs>
+            <clipPath id="Icon_Color-Link_Circle_svg__a">
+                <path fill="#fff" d="M0 0h48v48H0z"></path>
+            </clipPath>
+        </defs>
+    </svg>
+);
+
+const WhatsAppIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <g clipPath="url(#Icon_Color-Whatsapp_Circle_svg__a)" fillRule="evenodd" clipRule="evenodd">
+            <path d="M24 48a24 24 0 1 0 0-48 24 24 0 0 0 0 48Z" fill="#25D366"></path>
+            <path
+                d="M29.96 26.58c-.33-.16-1.92-.94-2.21-1.05-.3-.1-.52-.16-.73.16-.22.33-.84 1.05-1.03 1.27-.18.21-.37.24-.7.08-.32-.16-1.36-.5-2.6-1.6a9.7 9.7 0 0 1-1.8-2.23c-.19-.32-.02-.5.14-.66.15-.14.33-.37.49-.56.16-.19.22-.32.32-.54.11-.21.06-.4-.02-.56-.08-.16-.73-1.75-1-2.4-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.07-.86.4-.3.32-1.13 1.1-1.13 2.68 0 1.59 1.16 3.12 1.32 3.33.16.22 2.28 3.47 5.52 4.86.77.33 1.38.53 1.85.68.77.25 1.48.21 2.03.13.63-.1 1.92-.78 2.19-1.53s.27-1.4.19-1.53c-.08-.14-.3-.22-.62-.38Zm-5.9 8.02c-2.12 0-4.08-.66-5.88-1.72l-4.07 1.06 1.09-3.95a11.32 11.32 0 0 1-1.9-6.1 10.75 10.75 0 0 1 21.50 0c0 5.9-4.83 10.71-10.76 10.71Zm0-23.6A12.93 12.93 0 0 0 11.1 23.88c0 2.27.6 4.49 1.73 6.44L11 37l6.86-1.8a12.98 12.98 0 0 0 6.19 1.58C31.1 36.78 37 30.9 37 23.89 37 16.84 31.09 11 24.05 11Z"
+                fill="#fff"
+            ></path>
+        </g>
+        <defs>
+            <clipPath id="Icon_Color-Whatsapp_Circle_svg__a">
+                <path fill="#fff" d="M0 0h48v48H0z"></path>
+            </clipPath>
+        </defs>
+    </svg>
+);
+
+const ShareEmbedIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        width={width}
+        data-e2e=""
+        height={height}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className={className}
+    >
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+            fill="#161823"
+            fillOpacity="0.75"
+        ></path>
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M12.313 7.96568C12.3665 7.65966 12.658 7.45498 12.964 7.50851C13.27 7.56203 13.4747 7.8535 13.4211 8.15951L12.0506 15.9952C11.997 16.3012 11.7056 16.5059 11.3996 16.4523C11.0936 16.3988 10.8889 16.1073 10.9424 15.8013L12.313 7.96568ZM16.2402 8.77448C15.96 8.48453 15.5058 8.48453 15.2256 8.77448C14.9454 9.06443 14.9454 9.53454 15.2256 9.82449L17.454 12.1307L15.2262 14.4364C14.946 14.7263 14.946 15.1964 15.2262 15.4864C15.5063 15.7763 15.9606 15.7763 16.2407 15.4864L19.4551 12.1598C19.4704 12.1439 19.4704 12.1182 19.4551 12.1023L19.2233 11.8623L19.2201 11.8586L19.2158 11.854L16.2402 8.77448ZM8.88972 15.4867C8.59977 15.7766 8.12966 15.7766 7.83971 15.4867L5.4207 13.0677L4.76017 12.4071L4.51191 12.1589C4.49603 12.143 4.49603 12.1173 4.51191 12.1014L7.83853 8.77477C8.12848 8.48482 8.59859 8.48482 8.88854 8.77477C9.17849 9.06472 9.17849 9.53482 8.88854 9.82478L6.58318 12.1301L8.88972 14.4367C9.17967 14.7266 9.17967 15.1967 8.88972 15.4867Z"
+            fill="white"
+        ></path>
+    </svg>
+);
+
+const FbIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <g clipPath="url(#Icon_Color-Facebook_Circle_svg__a)">
+            <circle cx="24" cy="24" r="24" fill="#fff"></circle>
+            <path
+                d="M27.75 47.7a24 24 0 1 0-7.52 0V31.15H14.1v-6.98h6.13s-.03-3.98 0-5.75.38-3.47 1.3-5.03c1.4-2.4 3.58-3.57 6.26-3.9 2.27-.29 4.67-.03 6.92.4v5.96l-.68-.02c-1.02-.03-2.32-.07-3.24.07-1.9.3-3 1.52-3.03 3.44-.04 1.5-.02 4.83-.02 4.83h6.69l-1.09 6.98h-5.6v16.57Z"
+                fill="#0075FA"
+            ></path>
+        </g>
+        <defs>
+            <clipPath id="Icon_Color-Facebook_Circle_svg__a">
+                <path fill="#fff" d="M0 0h48v48H0z"></path>
+            </clipPath>
+        </defs>
+    </svg>
+);
+
+const TeleIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <g clipPath="url(#Icon_Color-Telegram_Circle_svg__a)">
+            <path
+                d="M7.03 40.97A24 24 0 1 0 40.97 7.03 24 24 0 0 0 7.03 40.97Z"
+                fill="url(#Icon_Color-Telegram_Circle_svg__b)"
+            ></path>
+            <path
+                d="m9.99 23.8 16.16-6.67c1.6-.7 7-2.91 7-2.91s2.5-.97 2.3 1.39c-.07.97-.63 4.37-1.18 8.04l-1.74 10.9s-.14 1.59-1.32 1.87c-1.18.27-3.12-.97-3.46-1.25-.28-.21-5.2-3.33-7.01-4.86-.49-.41-1.04-1.25.07-2.22 2.5-2.29 5.48-5.13 7.28-6.93.84-.84 1.67-2.78-1.8-.42l-9.78 6.59s-1.11.7-3.2.07c-2.07-.63-4.5-1.46-4.5-1.46S7.14 24.9 9.99 23.8Z"
+                fill="#fff"
+            ></path>
+        </g>
+        <defs>
+            <linearGradient
+                id="Icon_Color-Telegram_Circle_svg__b"
+                x1="40.97"
+                y1="7.03"
+                x2="7.03"
+                y2="40.97"
+                gradientUnits="userSpaceOnUse"
+            >
+                <stop stopColor="#37AEE2"></stop>
+                <stop offset="1" stopColor="#1E96C8"></stop>
+            </linearGradient>
+            <clipPath id="Icon_Color-Telegram_Circle_svg__a">
+                <path fill="#fff" d="M0 0h48v48H0z"></path>
+            </clipPath>
+        </defs>
+    </svg>
+);
+
+const XIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <g clipPath="url(#Icon_Color-Twitter_Circle_svg__a)">
+            <circle cx="24" cy="24" r="24" fill="#000"></circle>
+            <path
+                d="M31.76 11.8h4.14l-9.04 10.34L37.5 36.2h-8.33l-6.53-8.53-7.46 8.53h-4.15l9.68-11.05L10.5 11.8h8.54l5.9 7.8 6.82-7.8Zm-1.45 21.92h2.3L17.8 14.15h-2.47l14.98 19.57Z"
+                fill="#fff"
+            ></path>
+        </g>
+        <defs>
+            <clipPath id="Icon_Color-Twitter_Circle_svg__a">
+                <path fill="#fff" d="M0 0h48v48H0z"></path>
+            </clipPath>
+        </defs>
+    </svg>
+);
+
+const LinkinIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <circle cx="24" cy="24" r="24" fill="#0A66C2"></circle>
+        <path
+            d="M25.28 21.86a5.43 5.43 0 0 1 2.63-2.24 5.24 5.24 0 0 1 2.03-.36c1.1 0 2.2.13 3.2.63 1.5.73 2.2 2.04 2.55 3.59.23 1.14.34 2.3.31 3.47v8.47c0 .24-.06.31-.3.3h-4.36c-.26 0-.33-.05-.33-.32v-8.03c.01-.56-.04-1.13-.16-1.68-.32-1.5-1.27-2.19-2.8-2.04-1.52.16-2.36 1.04-2.57 2.69-.05.43-.07.85-.07 1.28v7.78c0 .27-.07.33-.33.33H20.7c-.24 0-.3-.07-.3-.3V19.97c0-.27.08-.31.32-.31h4.16c.27 0 .32.08.31.32v1.84l.09.04Z"
+            fill="#FDFEFE"
+        ></path>
+        <path
+            d="M17.26 27.68v7.71c0 .27-.06.34-.33.34h-4.38c-.22 0-.3-.05-.3-.3V19.96c0-.21.04-.3.26-.3 1.48.02 2.96.02 4.44 0 .27 0 .3.1.3.32v7.71ZM11.88 14.55a2.9 2.9 0 1 1 5.78 0 2.9 2.9 0 0 1-5.78 0Z"
+            fill="#FDFDFE"
+        ></path>
+    </svg>
+);
+
+const EmailIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <path fillRule="evenodd" clipRule="evenodd" d="M24 48a24 24 0 1 0 0-48 24 24 0 0 0 0 48Z" fill="#0DBEF3"></path>
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M13.63 14.9a2.1 2.1 0 0 0-2.09 2.09V31c0 1.16.94 2.1 2.1 2.1h20.73a2.1 2.1 0 0 0 2.09-2.1V17a2.1 2.1 0 0 0-2.1-2.1H13.64Zm20.1 2.48L24 24.11l-9.72-6.73a.52.52 0 0 0-.82.43v1.28L24 26.4l10.54-7.3v-1.28a.52.52 0 0 0-.82-.43Z"
+            fill="#fff"
+        ></path>
+    </svg>
+);
+
+const RedditIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <path d="M24 48a24 24 0 1 1 0-48 24 24 0 0 1 0 48Z" fill="#FF4500"></path>
+        <path
+            d="M29.15 28.47a2.36 2.36 0 0 1-2.34-2.36c0-1.31 1.05-2.37 2.34-2.37 1.3 0 2.35 1.06 2.35 2.37 0 1.3-1.05 2.36-2.35 2.36Zm.42 3.9c-1.6 1.6-4.67 1.73-5.57 1.73-.9 0-3.97-.12-5.57-1.74a.62.62 0 0 1 0-.87.6.6 0 0 1 .86 0c1 1.02 3.16 1.39 4.7 1.39 1.55 0 3.7-.37 4.72-1.39a.6.6 0 0 1 .86 0c.23.24.23.63 0 .87ZM16.49 26.1c0-1.31 1.05-2.37 2.34-2.37 1.3 0 2.35 1.06 2.35 2.37 0 1.3-1.05 2.36-2.35 2.36a2.36 2.36 0 0 1-2.34-2.36ZM39 23.74a3.3 3.3 0 0 0-3.28-3.32c-.89 0-1.7.36-2.28.93a15.96 15.96 0 0 0-8.78-2.81l1.5-7.1 4.88 1.04a2.35 2.35 0 0 0 2.33 2.26c1.3 0 2.35-1.06 2.35-2.37a2.33 2.33 0 0 0-4.44-1.05l-5.46-1.17a.58.58 0 0 0-.7.45l-1.63 7.8v.13c-3.5.1-6.66 1.16-8.94 2.81a3.24 3.24 0 0 0-2.27-.92 3.32 3.32 0 0 0-1.34 6.34c-.05.33-.08.66-.08 1 0 5.1 5.88 9.24 13.14 9.24 7.25 0 13.13-4.13 13.13-9.23 0-.34-.03-.67-.08-1A3.33 3.33 0 0 0 39 23.74Z"
+            fill="#fff"
+        ></path>
+    </svg>
+);
+
+const LineIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <g clipPath="url(#Icon_Color-Line_Circle_svg__a)">
+            <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M24 48a24 24 0 1 0 0-48 24 24 0 0 0 0 48Z"
+                fill="#06C755"
+            ></path>
+            <path
+                d="M39 22.3c0-6.72-6.73-12.18-15-12.18S9 15.58 9 22.29c0 6.02 5.34 11.06 12.54 12.01.5.1 1.16.32 1.33.74.15.38.1.97.04 1.36l-.2 1.28c-.07.38-.31 1.48 1.29.8 1.6-.67 8.64-5.08 11.79-8.7 2.17-2.38 3.21-4.8 3.21-7.49Z"
+                fill="#fff"
+            ></path>
+            <path
+                d="M20.95 19.05H19.9a.3.3 0 0 0-.3.29v6.53c0 .16.14.3.3.3h1.05a.3.3 0 0 0 .3-.3v-6.53a.3.3 0 0 0-.3-.3ZM28.2 19.05h-1.06a.3.3 0 0 0-.29.29v3.88l-3-4.04a.3.3 0 0 0-.24-.13h-1.05a.3.3 0 0 0-.3.29v6.53c0 .16.14.3.3.3h1.05a.3.3 0 0 0 .3-.3V22l3 4.05a.3.3 0 0 0 .23.12h1.05a.3.3 0 0 0 .3-.29v-6.53a.3.3 0 0 0-.3-.3ZM18.41 24.53h-2.85v-5.2a.3.3 0 0 0-.3-.28h-1.05a.3.3 0 0 0-.3.29v6.53c0 .16.14.3.3.3h4.2a.3.3 0 0 0 .3-.3v-1.05a.3.3 0 0 0-.3-.3ZM34 20.68a.3.3 0 0 0 .3-.29v-1.05a.3.3 0 0 0-.3-.3h-4.2a.3.3 0 0 0-.3.3v6.53c0 .16.14.3.3.3H34a.3.3 0 0 0 .3-.3v-1.05a.3.3 0 0 0-.3-.3h-2.86v-1.1H34a.3.3 0 0 0 .3-.29v-1.05a.3.3 0 0 0-.3-.3h-2.86v-1.1H34Z"
+                fill="#00B900"
+            ></path>
+        </g>
+        <defs>
+            <clipPath id="Icon_Color-Line_Circle_svg__a">
+                <path fill="#fff" d="M0 0h48v48H0z"></path>
+            </clipPath>
+        </defs>
+    </svg>
+);
+
+const PinterrestIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <circle cx="24" cy="24" r="24" fill="#D22D29"></circle>
+        <path
+            d="M24.02 12a11.97 11.97 0 0 0-4.37 23.13c-.1-.94-.2-2.4.04-3.44l1.4-5.95s-.35-.72-.35-1.77c0-1.67.96-2.9 2.16-2.9 1.03 0 1.52.76 1.52 1.68 0 1.02-.65 2.56-1 3.99-.28 1.19.6 2.17 1.78 2.17 2.13 0 3.76-2.25 3.76-5.48 0-2.87-2.06-4.87-5-4.87-3.41 0-5.41 2.55-5.41 5.2 0 1.02.4 2.12.89 2.72.1.12.1.23.07.35-.08.37-.3 1.19-.33 1.36-.05.21-.18.26-.4.15-1.48-.7-2.4-2.9-2.4-4.65 0-3.77 2.73-7.24 7.9-7.24 4.15 0 7.38 2.96 7.38 6.92 0 4.13-2.6 7.45-6.2 7.45-1.22 0-2.36-.63-2.74-1.38l-.75 2.85c-.27 1.04-1 2.34-1.49 3.14A11.97 11.97 0 1 0 24.02 12Z"
+            fill="#fff"
+        ></path>
+    </svg>
+);
 export {
     UploadIcon,
     MessageIcon,
@@ -654,7 +976,7 @@ export {
     LiveActiveIcon,
     FollowIcon,
     UnFollowIcon,
-    LikeIcon,
+    NonLikeIcon,
     CommentIcon,
     BookmarkIcon,
     ShareIcon,
@@ -669,4 +991,18 @@ export {
     PictureInPictureIcon,
     NoInterestedIcon,
     ReportIcon,
+    CloseIcon,
+    ShareLinkIcon,
+    Reposted,
+    ActionShareLink,
+    WhatsAppIcon,
+    ShareEmbedIcon,
+    FbIcon,
+    TeleIcon,
+    XIcon,
+    LinkinIcon,
+    EmailIcon,
+    RedditIcon,
+    LineIcon,
+    PinterrestIcon,
 };

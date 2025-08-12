@@ -1,0 +1,166 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    animation: fadeIn 0.3s ease;
+    max-width: calc(100% - 900px);
+    width: 500px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// Chưa dùng
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+.share-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.heading {
+    flex: 1;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.close-btn {
+    background-color: transparent;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.close-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.copy-wrapper {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    // height: 40px;
+    background-color: #f2f2f2;
+    padding: 6px 8px;
+    border-radius: 8px;
+    height: 50px;
+}
+
+.input-link {
+    flex: 1;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background-color: #f2f2f2;
+    color: var(--text-color);
+}
+
+.share-btn {
+    margin-left: 8px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    &:hover {
+        cursor: pointer;
+        background-color: #e6e6e6;
+    }
+}
+
+.share-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+// Action List Styles
+
+.action-list {
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    overflow: auto;
+    align-items: center;
+    padding-top: 14px;
+    max-height: 214px;
+    /* Ẩn scrollbar trên Chrome, Safari */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+    &:hover {
+        background-color: var(--action-hover-color);
+        cursor: pointer;
+    }
+}
+.reposted-icon,
+.actionShareLink-icon,
+.whatsapp-icon,
+.shareembed-icon,
+.fb-icon,
+.tele-icon,
+.x-icon,
+.linkin-icon,
+.email-icon,
+.reddit-icon,
+.line-icon,
+.pinterrest-icon {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+}
+
+.action-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+// Custom toast message styles
+.my-toast {
+    border-radius: 8px !important;
+    width: 150px !important; /* Chiều rộng mong muốn */
+    font-size: 1.4rem !important;
+    align-items: center !important;
+}
