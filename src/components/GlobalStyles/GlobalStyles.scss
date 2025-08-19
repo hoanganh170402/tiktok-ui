@@ -16,6 +16,9 @@
     --separate-color: #e3e3e4;
     --font-family: 'IBM Plex Sans', sans-serif;
 
+    // Background colors
+    --bg-color: #f2f2f2;
+
     // Hover colors
     --btn-hover-color: rgba(255, 255, 255, 0.19);
     --action-hover-color: #f2f2f2;
@@ -24,6 +27,7 @@
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
     --default-layout-horizontal-spacer: 24px;
+    --height-navbar-explore : 74px;
 }
 
 * {

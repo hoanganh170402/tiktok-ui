@@ -16,4 +16,7 @@
     flex: 1;
     display: flex;
     position: relative;
+    
+    // Fix for explore page
+    max-width: 790px;
 }

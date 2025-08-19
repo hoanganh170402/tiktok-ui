@@ -68,45 +68,8 @@
     height: 2.2rem;
 }
 
-.copy-wrapper {
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    // height: 40px;
-    background-color: #f2f2f2;
-    padding: 6px 8px;
-    border-radius: 8px;
-    height: 50px;
-}
-
-.input-link {
-    flex: 1;
-    font-size: 1.6rem;
-    font-weight: 500;
-    background-color: #f2f2f2;
-    color: var(--text-color);
-}
-
-.share-btn {
-    margin-left: 8px;
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    &:hover {
-        cursor: pointer;
-        background-color: #e6e6e6;
-    }
-}
-
-.share-icon {
-    width: 2rem;
-    height: 2rem;
-}
 
 // Action List Styles
-
 .action-list {
     width: 100%;
     display: grid;
@@ -157,10 +120,3 @@
     font-weight: 500;
 }
 
-// Custom toast message styles
-.my-toast {
-    border-radius: 8px !important;
-    width: 150px !important; /* Chiều rộng mong muốn */
-    font-size: 1.4rem !important;
-    align-items: center !important;
-}

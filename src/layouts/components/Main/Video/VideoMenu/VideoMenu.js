@@ -7,7 +7,7 @@ import styles from '../Video.module.scss';
 
 const cx = classNames.bind(styles);
 
-function VideoMenu() {
+function VideoMenu({ valueOffset = [-5, 15], placement = 'right-end' }) {
     const menuPreview = () => (
         <PopperWrapper>
             <MenuPreview />
@@ -16,10 +16,10 @@ function VideoMenu() {
 
     return (
         <Tippy
-            placement="right-end"
+            placement={placement}
             interactive
             delay={[150, 150]}
-            offset={[-5, 15]}
+            offset={valueOffset}
             render={menuPreview}
             trigger="click"
         >

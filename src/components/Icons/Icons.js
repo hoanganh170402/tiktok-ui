@@ -956,6 +956,79 @@ const PinterrestIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
         ></path>
     </svg>
 );
+
+const ExploreIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        fill="currentColor"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <path d="M24 37.4a13.4 13.4 0 1 0 0-26.8 13.4 13.4 0 0 0 0 26.8ZM40.5 24a16.5 16.5 0 1 1-33 0 16.5 16.5 0 0 1 33 0Z"></path>
+        <path d="M27.13 27.18 19 32.1a.6.6 0 0 1-.9-.63l1.84-9.33a2 2 0 0 1 .92-1.32L29 15.9a.6.6 0 0 1 .9.63l-1.84 9.33a2 2 0 0 1-.93 1.32Zm-5.04-.45 3.11-1.89.7-3.57-3.1 1.89-.7 3.57Z"></path>
+    </svg>
+);
+
+const ExploreActiveIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        fill="currentColor"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <path d="M24 40.5a16.5 16.5 0 1 0 0-33 16.5 16.5 0 0 0 0 33Zm4.43-14.54c-.12.6-.49 1.12-1.01 1.44l-8.88 5.37a.65.65 0 0 1-.98-.69l2.01-10.18c.12-.6.49-1.12 1.01-1.44l8.88-5.37a.65.65 0 0 1 .98.69l-2.01 10.18Z"></path>
+        <path d="m21.92 26.89 3.4-2.05.76-3.9-3.4 2.06-.76 3.89Z"></path>
+    </svg>
+);
+
+const NextBtnIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        fill="currentColor"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <path d="M39.88 24 26.7 10.83a1 1 0 0 1 0-1.41l2.83-2.83a1 1 0 0 1 1.41 0L47.3 22.94a1.5 1.5 0 0 1 0 2.12L30.95 41.42a1 1 0 0 1-1.41 0l-2.83-2.83a1 1 0 0 1 0-1.42L39.88 24Z"></path>
+    </svg>
+);
+
+const PrevBtnIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        fill="currentColor"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+        style={{ transform: 'rotate(180deg)' }}
+    >
+        <path d="M39.88 24 26.7 10.83a1 1 0 0 1 0-1.41l2.83-2.83a1 1 0 0 1 1.41 0L47.3 22.94a1.5 1.5 0 0 1 0 2.12L30.95 41.42a1 1 0 0 1-1.41 0l-2.83-2.83a1 1 0 0 1 0-1.42L39.88 24Z"></path>
+    </svg>
+);
+
+const SmallLikeIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        fill="currentColor"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M40.96 24.15c1.83-4.8 1.05-8.61-.8-11.33a10.87 10.87 0 0 0-6.34-4.49 9.43 9.43 0 0 0-6.83 1.17c-1.08.65-2.1 1.53-2.99 2.66-.9-1.13-1.9-2.01-3-2.66a9.43 9.43 0 0 0-6.82-1.17 10.87 10.87 0 0 0-6.34 4.49c-1.85 2.72-2.63 6.54-.8 11.33 1.43 3.74 4.5 7.23 7.6 9.98a46.31 46.31 0 0 0 8.6 6.12l.76.4.76-.4a46.31 46.31 0 0 0 8.6-6.12c3.1-2.75 6.17-6.24 7.6-9.98ZM24 17.58c2.3-2.88 4.7-6.2 9.03-5.33a6.95 6.95 0 0 1 3.82 2.81c1.07 1.58 1.76 4.02.37 7.66-1.09 2.86-3.6 5.82-6.51 8.43A44.84 44.84 0 0 1 24 36.09a44.84 44.84 0 0 1-6.7-4.94c-2.93-2.6-5.43-5.57-6.52-8.43-1.4-3.64-.7-6.08.37-7.66a6.95 6.95 0 0 1 3.82-2.8c4.33-.88 6.73 2.44 9.03 5.32Z"
+        ></path>
+    </svg>
+);
+
 export {
     UploadIcon,
     MessageIcon,
@@ -1005,4 +1078,9 @@ export {
     RedditIcon,
     LineIcon,
     PinterrestIcon,
+    ExploreIcon,
+    ExploreActiveIcon,
+    NextBtnIcon,
+    PrevBtnIcon,
+    SmallLikeIcon,
 };

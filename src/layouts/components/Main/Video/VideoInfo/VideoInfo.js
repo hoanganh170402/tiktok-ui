@@ -18,6 +18,7 @@ function VideoInfo({
     isBookmark,
     onBookmarkToggle,
     onShareClick,
+    onCommentClick,
 }) {
     return (
         <div className={cx('video-info')}>
@@ -38,7 +39,7 @@ function VideoInfo({
                 <span className={cx('info-count')}>{likes}</span>
             </div>
             <div className={cx('info-btn')}>
-                <span className={cx('icon')}>
+                <span className={cx('icon')} onClick={onCommentClick}>
                     <CommentIcon className={cx('icon-comment')} />
                 </span>
                 <span className={cx('info-count')}>{comments}</span>

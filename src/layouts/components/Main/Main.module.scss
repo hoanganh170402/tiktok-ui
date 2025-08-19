@@ -16,7 +16,6 @@ $btnWidth: 45px;
     padding-right: $btnWidth;
 }
 
-
 .nav-list-btn {
     width: $btnWidth;
     display: flex;
@@ -39,4 +38,9 @@ $btnWidth: 45px;
     &:hover {
         cursor: pointer;
     }
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }

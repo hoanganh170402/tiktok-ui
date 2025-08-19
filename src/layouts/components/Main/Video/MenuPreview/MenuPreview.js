@@ -12,52 +12,28 @@ import { ToggleSwitch } from '~/components/ToggleSwitch';
 
 const cx = classNames.bind(styles);
 
-function MenuPreview({ data }) {
+const MENU_ITEMS = [
+    { icon: QuanlityIcon, label: 'Quanlity', value: 'Auto' },
+    { icon: SubtitlesIcon, label: 'Subtitles' },
+    { icon: AutoPlayIcon, label: 'Auto play', toggle: true },
+    { icon: PictureInPictureIcon, label: 'Picture in Picture' },
+    { icon: NoInterestedIcon, label: 'No interested' },
+    { icon: ReportIcon, label: 'Report' },
+];
+
+function MenuPreview() {
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('menu-item')}>
-                <QuanlityIcon className={cx('menu-icon')} />
-                <div className={cx('menu-label')}>
-                    <span className={cx('menu-text')}>Quanlity</span>
-                    <span className={cx('menu-value')}>Auto</span>
+            {MENU_ITEMS.map(({ icon: Icon, label, value, toggle }) => (
+                <div key={label} className={cx('menu-item')}>
+                    <Icon className={cx('menu-icon')} />
+                    <div className={cx('menu-label')}>
+                        <span className={cx('menu-text')}>{label}</span>
+                        {value && <span className={cx('menu-value')}>{value}</span>}
+                        {toggle && <ToggleSwitch className={cx('toggleSwitch')} />}
+                    </div>
                 </div>
-            </div>
-
-            <div className={cx('menu-item')}>
-                <SubtitlesIcon className={cx('menu-icon')} />
-                <div className={cx('menu-label')}>
-                    <span className={cx('menu-text')}>Subtitles</span>
-                </div>
-            </div>
-
-            <div className={cx('menu-item')}>
-                <AutoPlayIcon className={cx('menu-icon')} />
-                <div className={cx('menu-label')}>
-                    <span className={cx('menu-text')}>Auto play</span>
-                    <ToggleSwitch className={cx('toggleSwitch')} />
-                </div>
-            </div>
-
-            <div className={cx('menu-item')}>
-                <PictureInPictureIcon className={cx('menu-icon')} />
-                <div className={cx('menu-label')}>
-                    <span className={cx('menu-text')}>Picture in Picture</span>
-                </div>
-            </div>
-
-            <div className={cx('menu-item')}>
-                <NoInterestedIcon className={cx('menu-icon')} />
-                <div className={cx('menu-label')}>
-                    <span className={cx('menu-text')}>No interested</span>
-                </div>
-            </div>
-
-            <div className={cx('menu-item')}>
-                <ReportIcon className={cx('menu-icon')} />
-                <div className={cx('menu-label')}>
-                    <span className={cx('menu-text')}>Report</span>
-                </div>
-            </div>
+            ))}
         </div>
     );
 }

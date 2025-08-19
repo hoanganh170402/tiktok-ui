@@ -9,6 +9,8 @@ import {
     UserGroupActiveIcon,
     LiveIcon,
     LiveActiveIcon,
+    ExploreIcon,
+    ExploreActiveIcon,
 } from '~/components/Icons';
 import config from '~/config';
 import SuggestedAccounts from '~/components/SuggestedAccounts';
@@ -44,6 +46,12 @@ function Sidebar() {
             <Menu>
                 <MenuItem title="For You" icon={<HomeIcon />} activeIcon={<HomeActiveIcon />} to={config.routes.home} />
                 <MenuItem
+                    title="Explore"
+                    icon={<ExploreIcon />}
+                    activeIcon={<ExploreActiveIcon />}
+                    to={config.routes.explore}
+                />
+                <MenuItem
                     title="Following"
                     icon={<UserGroupIcon />}
                     activeIcon={<UserGroupActiveIcon />}
@@ -57,7 +65,7 @@ function Sidebar() {
                 data={allUsers.slice(0, visibleCount)}
                 onSeeMore={handleSeeMore}
             />
-            
+
             <Footer />
         </aside>
     );

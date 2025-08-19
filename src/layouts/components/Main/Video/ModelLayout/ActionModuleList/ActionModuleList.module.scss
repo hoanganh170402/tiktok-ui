@@ -1,0 +1,95 @@
+.action-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.action-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-btn {
+    display: flex;
+    align-items: center;
+}
+
+.info-btn + .info-btn {
+    padding-left: 10px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+}
+
+.icon.ds-bg {
+    background-color: transparent;
+}
+
+.icon-like,
+.icon-comment,
+.icon-bookmark {
+    width: 2.6rem;
+    height: 2.6rem;
+}
+
+.icon-like.liked {
+    color: var(--primary-color);
+}
+.icon-bookmark.bookmarked {
+    color: #face15;
+}
+
+.info-count {
+    position: relative;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.social-btns {
+    display: flex;
+}
+
+.action-item {
+}
+
+.action-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.reposted-icon {
+    border-radius: 50%;
+}
+
+.actionShareLink-icon {
+}
+
+.whatsapp-icon {
+}
+
+.shareembed-icon {
+}
+
+.fb-icon {
+}
+
+// Thay đổi vị trí của popper wrapper
+.change-pss {
+    position: relative;
+    left: 32px;
+    padding-top: 0;
+}

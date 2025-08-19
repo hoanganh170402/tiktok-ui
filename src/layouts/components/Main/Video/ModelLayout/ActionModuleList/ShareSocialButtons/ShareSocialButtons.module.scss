@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 280px;
+    border-radius: 5px;
+    &:hover {
+        background-color: var(--bg-color);
+    }
+}
+
+.icon {
+    width: 2.6rem;
+    height: 2.6rem;
+}
+
+.label {
+    padding-left: 10px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}

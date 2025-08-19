@@ -339,7 +339,7 @@ import VideoInfo from './VideoInfo';
 import Overlay from './Overlay';
 
 import { AudioContext } from '~/context/AudioContext';
-import { CloseIcon, ShareLinkIcon } from '~/components/Icons';
+import ModelLayout from './ModelLayout';
 
 const cx = classNames.bind(styles);
 
@@ -354,6 +354,7 @@ function Video({ data }) {
     const [isLike, setIsLike] = useState(false);
     const [isBookmark, setIsBookmark] = useState(false);
     const [isShareOpen, setIsShareOpen] = useState(false);
+    const [isModelOpen, setIsModelOpen] = useState(false);
 
     // Context âm thanh
     const { isMuted, setIsMuted, volume, setVolume } = useContext(AudioContext);
@@ -461,6 +462,22 @@ function Video({ data }) {
         setIsShareOpen(false);
     };
 
+    const handleOpenModel = () => {
+        if (videoRef.current) {
+            videoRef.current.pause();
+            setIsPlaying(false);
+        }
+        setIsModelOpen(true);
+    };
+
+    const handleCloseModel = () => {
+        setIsModelOpen(false);
+        if (videoRef.current) {
+            videoRef.current.play().catch(() => {});
+            setIsPlaying(true);
+        }
+    };
+
     return (
         <div className={cx('wrapper')}>
             {/* Video + Controls */}
@@ -476,7 +493,7 @@ function Video({ data }) {
 
                 <div className={cx('controls')}>
                     <VolumeControl isMuted={isMuted} setIsMuted={setIsMuted} volume={volume} setVolume={setVolume} />
-                    <VideoMenu />
+                    <VideoMenu valueOffset={[-5, 15]} />
                 </div>
 
                 <VideoDescription
@@ -503,8 +520,24 @@ function Video({ data }) {
                 isBookmark={isBookmark}
                 onBookmarkToggle={handleBookmarkToggle}
                 onShareClick={handleShareClick}
+                onCommentClick={handleOpenModel} // Mở ModelLayout khi click vào comment icon
             />
             {isShareOpen && <Overlay onClose={handleCloseShare} data={data} />}
+            {isModelOpen && (
+                <ModelLayout
+                    onClose={handleCloseModel}
+                    data={data}
+                    src={data.file_url}
+                    onLikeToggle={handleLikeToggle}
+                    likes={data.likes_count}
+                    isLike={isLike}
+                    comments={data.comments_count}
+                    // onCommentClick={handleOpenModel} // Mở ModelLayout khi click vào comment icon
+                    bookmarks={data.shares_count}
+                    isBookmark={isBookmark}
+                    onBookmarkToggle={handleBookmarkToggle}
+                />
+            )}
         </div>
     );
 }

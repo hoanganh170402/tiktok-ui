@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 
 function AcctountItem({ data, ...props }) {
     return (
-        <Link to={`/@${data.nickname}`} className={cx('wrapper')} {...props}>
+        <Link to={`/${data.nickname}`} className={cx('wrapper')} {...props}>
             <Image className={cx('avatar')} src={data.avatar} alt={data.full_name} />
             <div className={cx('info')}>
                 <h4 className={cx('name')}>
