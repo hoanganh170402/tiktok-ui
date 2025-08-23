@@ -504,6 +504,7 @@ function Video({ data }) {
                     handleToggle={handleToggle}
                     progress={progress}
                     handleProgressClick={handleProgressClick}
+                    music={data.music}
                 />
             </div>
 

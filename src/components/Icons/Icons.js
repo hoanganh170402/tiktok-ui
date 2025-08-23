@@ -1029,6 +1029,33 @@ const SmallLikeIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     </svg>
 );
 
+const CalendarIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        fill="currentColor"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <path d="M15 3a1 1 0 0 0-1 1v3h-1.4c-3.36 0-5.04 0-6.32.65a6 6 0 0 0-2.63 2.63C3 11.56 3 13.24 3 16.6v16.8c0 3.36 0 5.04.65 6.32a6 6 0 0 0 2.63 2.63c1.28.65 2.96.65 6.32.65h22.8c3.36 0 5.04 0 6.32-.65a6 6 0 0 0 2.63-2.63c.65-1.28.65-2.96.65-6.32V16.6c0-3.36 0-5.04-.65-6.32a6 6 0 0 0-2.63-2.63C40.44 7 38.76 7 35.4 7H34V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3H18V4a1 1 0 0 0-1-1h-2Zm-2.4 8H14v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3h12v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3h1.4c1.75 0 2.82 0 3.62.07a5.11 5.11 0 0 1 .86.14h.03a2 2 0 0 1 .88.91 5.11 5.11 0 0 1 .14.86c.07.8.07 1.87.07 3.62v1.9H7v-1.9c0-1.75 0-2.82.07-3.62a5.12 5.12 0 0 1 .14-.86v-.03a2 2 0 0 1 .88-.87l.03-.01a5.11 5.11 0 0 1 .86-.14c.8-.07 1.87-.07 3.62-.07ZM7 22.5h34v10.9c0 1.75 0 2.82-.07 3.62a5.11 5.11 0 0 1-.14.86v.03a2 2 0 0 1-.88.87l-.03.01a5.11 5.11 0 0 1-.86.14c-.8.07-1.87.07-3.62.07H12.6c-1.75 0-2.82 0-3.62-.07a5.11 5.11 0 0 1-.89-.15 2 2 0 0 1-.87-.87l-.01-.03a5.12 5.12 0 0 1-.14-.86C7 36.22 7 35.15 7 33.4V22.5Z"></path>
+    </svg>
+);
+
+const OclockIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        fill="currentColor"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <path d="M22 24a2 2 0 0 0 .85 1.64l9.19 6.43a1 1 0 0 0 1.39-.25l1.15-1.64a1 1 0 0 0-.25-1.39l-7.9-5.53a1 1 0 0 1-.43-.82V13a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v11Z"></path>
+        <path d="M24 2a22 22 0 1 0 0 44 22 22 0 0 0 0-44ZM6 24a18 18 0 1 1 36 0 18 18 0 0 1-36 0Z"></path>
+    </svg>
+);
+
 export {
     UploadIcon,
     MessageIcon,
@@ -1083,4 +1110,6 @@ export {
     NextBtnIcon,
     PrevBtnIcon,
     SmallLikeIcon,
+    CalendarIcon,
+    OclockIcon,
 };

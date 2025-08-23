@@ -12,6 +12,7 @@ function VideoDescription({
     handleToggle,
     progress,
     handleProgressClick,
+    music,
 }) {
     const maxLength = 40;
     const displayText = isExpanded ? description : description.slice(0, maxLength) + (isLongDescription ? '...' : '');
@@ -31,8 +32,12 @@ function VideoDescription({
                 )}
             </div>
             <span className={cx('music')}>
-                <MusicIcon className={cx('music-icon')} />
-                <p className={cx('music-name')}>Trending - Breaking News Background Music - Blaze Records</p>
+                {music && (
+                    <>
+                        <MusicIcon className={cx('music-icon')} />
+                        <p className={cx('music-name')}>{music}</p>
+                    </>
+                )}
             </span>
             <div className={cx('progress-bar')} onClick={handleProgressClick}>
                 <div className={cx('progress-bar-inner')} style={{ width: `${progress}%` }}></div>

@@ -26,6 +26,12 @@
 // }
 
 /* video chiếm hết khung */
+
+/* ✅ thêm class cho dạng ngang */
+.landscape {
+    aspect-ratio: 19 / 6; /* ngang rộng */
+}
+
 .video {
     width: 100%;
     height: 100%;

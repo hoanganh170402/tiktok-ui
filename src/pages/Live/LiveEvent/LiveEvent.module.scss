@@ -1,0 +1,128 @@
+.wrapper {
+    margin-top: 12px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.item {
+    background: rgba(22, 24, 35, 0.03);
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    min-width: 0; // quan trọng để ellipsis hoạt động đúng
+    &:hover {
+        cursor: pointer;
+        background: rgba(22, 24, 35, 0.06);
+    }
+}
+
+.des-wrapper {
+    display: flex;
+    align-items: center;
+    min-width: 0; // cho phép .description co lại
+}
+
+.logo {
+    background-image: linear-gradient(131.17deg, rgb(255, 23, 100), rgb(237, 52, 149));
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    height: 25px;
+    border-radius: 4px;
+    padding: 0 6px;
+    max-width: 40px;
+    width: 38px;
+
+    /* Giới hạn 1 dòng + hiện ... */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.description {
+    padding-left: 8px;
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    /* Giới hạn 1 dòng + hiện ... */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0; // không fix max-width, cho nó co theo cột
+}
+
+.info-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    span {
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+}
+
+.ava {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.check {
+    width: 12px;
+    height: 12px;
+    margin-left: 6px;
+}
+
+.count {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-color-blur);
+}
+
+.time-wrapper {
+    margin: 12px 0;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+.day {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.icon {
+}

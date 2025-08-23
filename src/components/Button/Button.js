@@ -35,7 +35,6 @@ function Button({
                 delete props[key];
             }
         });
-        
     }
 
     if (to) {

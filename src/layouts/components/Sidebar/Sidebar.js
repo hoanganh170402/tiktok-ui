@@ -14,7 +14,7 @@ import {
 } from '~/components/Icons';
 import config from '~/config';
 import SuggestedAccounts from '~/components/SuggestedAccounts';
-import * as userService from '~/services/userService copy';
+import * as userService from '~/services/userService';
 import Footer from '../Footer';
 
 const cx = classNames.bind(styles);

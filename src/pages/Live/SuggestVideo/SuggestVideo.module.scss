@@ -1,0 +1,84 @@
+.wrapper {
+    margin-top: 10px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.video-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // Chia 1 hàng có 2 cột
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.video-item {
+    &:hover {
+        transform: translateZ(0px) scale(1.01, 1.01);
+        cursor: pointer;
+    }
+    transition: transform 0.2s ease-in-out;
+}
+
+.video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9; // ép video ngang
+    border-radius: 8px;
+    position: relative;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.icon-live {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.live {
+    color: var(--primary-color);
+}
+
+.info-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.ava {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+}
+
+.info {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    font-size: 1.4rem;
+    max-width: 320px;
+}
+
+.description {
+    font-weight: 600;
+    /* Giới hạn 1 dòng + hiện ... */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.nickname {
+    color: var(--text-color-blur);
+}

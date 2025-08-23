@@ -1,0 +1,78 @@
+.navbar {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    max-height: 74px;
+}
+
+.btn {
+    // width: 40px;
+    // height: 40px;
+    background-color: var(--white);
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 4px;
+}
+
+.btn-prev,
+.btn-next {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+}
+
+.btn-prev {
+    left: 5px;
+}
+
+.btn-next {
+    right: 5px;
+}
+
+.btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.navbar-list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+    overflow: auto;
+    gap: 10px;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    // box-sizing: content-box;
+    padding: 20px 0 10px 0;
+
+    /* Ẩn scrollbar trên Chrome, Safari */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.navbar-item {
+    padding: 12px 20px;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    border-radius: 8px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-weight: 500;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.navbar-item.active {
+    background-color: var(--black);
+    color: var(--white);
+}
