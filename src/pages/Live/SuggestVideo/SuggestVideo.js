@@ -10,12 +10,12 @@ const cx = classNames.bind(styles);
 
 const INIT_PAGE = Math.floor(Math.random() * 10) + 1;
 
-function SuggestVideo({ title, perPage = 6 }) {
+function SuggestVideo({ title, perPage = 6, page = 12, ...props }) {
     const [allUsers, setAllUsers] = useState([]);
 
     useEffect(() => {
         const fetchApi = async () => {
-            const result = await userService.getSuggest({ page: 12, perPage: perPage });
+            const result = await userService.getSuggest({ page: page, perPage: perPage });
             if (result?.data) {
                 setAllUsers(result.data);
             }
@@ -24,7 +24,7 @@ function SuggestVideo({ title, perPage = 6 }) {
     }, [perPage]);
 
     return (
-        <div className={cx('wrapper')}>
+        <div className={cx('wrapper')} {...props}>
             <header className={cx('header')}>
                 <h2>{title}</h2>
                 <a href="/" target="_blank">

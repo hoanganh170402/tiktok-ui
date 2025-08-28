@@ -47,6 +47,7 @@ function Live() {
             setListItems(result);
         };
         fetchAPI();
+        // eslint-disable-next-line
     }, []);
 
     useEffect(() => {
@@ -118,6 +119,8 @@ function Live() {
                 <SuggestMenu title={'Suggest Menu'} />
 
                 <LiveEvent title={'Live Event'} />
+
+                <SuggestVideo title={'Esports'} perPage={6} page={20} style={{ marginTop: 20 }} />
             </div>
         </div>
     );

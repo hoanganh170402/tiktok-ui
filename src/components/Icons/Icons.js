@@ -1056,6 +1056,219 @@ const OclockIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     </svg>
 );
 
+const SidebarUpload = ({ width = '3.2rem', height = '3.2rem', className, stylesIcon }) => (
+    <svg
+        fill="currentColor"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+        style={stylesIcon}
+    >
+        <path d="M25 15a1 1 0 0 1 1 1v6h6a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-6v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-6h-6a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h6v-6a1 1 0 0 1 1-1h2Z"></path>
+        <path d="M33.58 4.5H14.42c-1.33 0-2.45 0-3.37.07-.95.08-1.86.25-2.73.7a7 7 0 0 0-3.06 3.05 7.14 7.14 0 0 0-.69 2.73 44.6 44.6 0 0 0-.07 3.37v19.16c0 1.33 0 2.45.07 3.37.08.95.25 1.86.7 2.73a7 7 0 0 0 3.05 3.06c.87.44 1.78.6 2.73.69.92.07 2.04.07 3.37.07h19.16c1.33 0 2.45 0 3.37-.07a7.14 7.14 0 0 0 2.73-.7 7 7 0 0 0 3.06-3.05c.44-.87.6-1.78.69-2.73.07-.92.07-2.04.07-3.37V14.42c0-1.33 0-2.45-.07-3.37a7.14 7.14 0 0 0-.7-2.73 7 7 0 0 0-3.05-3.06 7.14 7.14 0 0 0-2.73-.69 44.6 44.6 0 0 0-3.37-.07ZM10.14 8.83c.2-.1.53-.21 1.24-.27.73-.06 1.69-.06 3.12-.06h19c1.43 0 2.39 0 3.12.06a3.3 3.3 0 0 1 1.24.27 3 3 0 0 1 1.31 1.3c.1.21.21.54.27 1.25.06.73.06 1.69.06 3.12v19c0 1.43 0 2.39-.06 3.12a3.3 3.3 0 0 1-.27 1.24 3 3 0 0 1-1.3 1.31c-.21.1-.54.21-1.25.27-.73.06-1.69.06-3.12.06h-19c-1.43 0-2.39 0-3.12-.06a3.3 3.3 0 0 1-1.24-.27 3 3 0 0 1-1.31-1.3c-.1-.21-.21-.54-.27-1.25-.06-.73-.06-1.69-.06-3.12v-19c0-1.43 0-2.39.06-3.12a3.3 3.3 0 0 1 .27-1.24 3 3 0 0 1 1.3-1.31Z"></path>
+    </svg>
+);
+
+const PlusIcon = ({ width = '3.2rem', height = '3.2rem', className, stylesIcon }) => (
+    <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        role="img"
+        focusable="false"
+        data-icon="plus-bold"
+        aria-hidden="true"
+        fill="currentColor"
+        will-change="auto"
+        transform="rotate(0)"
+        className={className}
+        style={stylesIcon}
+    >
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M12 3.75c.69 0 1.25.56 1.25 1.25v5.75H19a1.25 1.25 0 1 1 0 2.5h-5.75V19a1.25 1.25 0 1 1-2.5 0v-5.75H5a1.25 1.25 0 1 1 0-2.5h5.75V5c0-.69.56-1.25 1.25-1.25"
+        ></path>
+    </svg>
+);
+
+const HOSidebarHome = ({ width = '1.8rem', height = '1.8rem', className, stylesIcon }) => (
+    <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        role="img"
+        focusable="false"
+        data-icon="house"
+        aria-hidden="true"
+        fill="var(--ui-text-2)"
+        will-change="auto"
+        transform="rotate(0)"
+        className={className}
+    >
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M14.066 3.225a3 3 0 0 0-4.132 0L1.97 10.79a1.5 1.5 0 0 0 .67 2.542l.359.09v6.22a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6.22l.36-.09a1.5 1.5 0 0 0 .669-2.542zm-2.755 1.45a1 1 0 0 1 1.378 0l7.302 6.938-.233.058a1 1 0 0 0-.758.971v7h-6v-5h-2v5H5v-7c0-.459-.313-.86-.758-.97l-.234-.06z"
+        ></path>
+    </svg>
+);
+
+const HOSidebarFolder = ({ width = '1.8rem', height = '1.8rem', className, stylesIcon }) => (
+    <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        role="img"
+        focusable="false"
+        data-icon="folder"
+        aria-hidden="true"
+        will-change="auto"
+        transform="rotate(0)"
+        className={className}
+    >
+        <path d="M5.998 3a3 3 0 0 0-3 3v11a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4V8a1 1 0 0 0-1-1h-5c-.755 0-.998-.245-1.594-1.438C12.501 3.755 11.744 3 9.998 3zm0 2h4c.755 0 .998.245 1.594 1.438.13.261.184.344.312.562H7.967a1 1 0 0 0 0 2h11.031v8a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1m4 8a1 1 0 0 0 0 2h4a1 1 0 0 0 0-2z"></path>
+    </svg>
+);
+
+const HOSidebarAnalytics = ({ width = '1.8rem', height = '1.8rem', className, stylesIcon }) => (
+    <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        role="img"
+        focusable="false"
+        data-icon="chart-rise"
+        aria-hidden="true"
+        will-change="auto"
+        transform="rotate(0)"
+        className={className}
+    >
+        <path d="M16 11.414V14h2V9.01A1.01 1.01 0 0 0 16.99 8H12v2h2.586l-1.854 1.854a.5.5 0 0 1-.353.146h-2.353a2.5 2.5 0 0 0-1.562.548l-2.089 1.671a1 1 0 0 0 1.25 1.562l2.089-1.671a.5.5 0 0 1 .312-.11h2.353a2.5 2.5 0 0 0 1.768-.732z"></path>
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M7.759 4h8.482c.805 0 1.47 0 2.01.044.563.046 1.08.145 1.565.392a4 4 0 0 1 1.748 1.748c.247.485.346 1.002.392 1.564C22 8.29 22 8.954 22 9.758v4.483c0 .805 0 1.47-.044 2.01-.046.563-.145 1.08-.392 1.565a4 4 0 0 1-1.748 1.748c-.485.247-1.002.346-1.564.392-.541.044-1.206.044-2.01.044H7.758c-.805 0-1.47 0-2.01-.044-.563-.046-1.08-.145-1.565-.392a4 4 0 0 1-1.748-1.748c-.247-.485-.346-1.002-.392-1.564C2 15.71 2 15.046 2 14.242V9.758c0-.805 0-1.47.044-2.01.046-.563.145-1.08.392-1.565a4 4 0 0 1 1.748-1.748c.485-.247 1.002-.346 1.564-.392C6.29 4 6.954 4 7.758 4M5.91 6.038c-.438.035-.663.1-.819.18a2 2 0 0 0-.874.874c-.08.156-.145.38-.18.819C4 8.361 4 8.943 4 9.8v4.4c0 .857 0 1.439.038 1.889.035.438.1.663.18.819a2 2 0 0 0 .874.874c.156.08.38.145.819.18C6.361 18 6.943 18 7.8 18h8.4c.857 0 1.439 0 1.889-.038.438-.035.663-.1.819-.18a2 2 0 0 0 .874-.874c.08-.156.145-.38.18-.819.037-.45.038-1.032.038-1.889V9.8c0-.857 0-1.439-.038-1.889-.035-.438-.1-.663-.18-.819a2 2 0 0 0-.874-.874c-.156-.08-.38-.145-.819-.18C17.639 6 17.057 6 16.2 6H7.8c-.857 0-1.439 0-1.889.038"
+        ></path>
+    </svg>
+);
+
+const HOSidebarComment = ({ width = '1.8rem', height = '1.8rem', className, stylesIcon }) => (
+    <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        role="img"
+        focusable="false"
+        data-icon="comments"
+        aria-hidden="true"
+        will-change="auto"
+        transform="rotate(0)"
+        className={className}
+    >
+        <path d="M4 11c0-3.427 3.403-6.5 8-6.5s8 3.073 8 6.5c0 2.148-1.072 4.037-2.595 5.619-1.049 1.089-2.275 1.992-3.405 2.683V17.5h-2c-4.597 0-8-3.073-8-6.5m8-8.5C6.655 2.5 2 6.143 2 11s4.655 8.5 10 8.5V21a1 1 0 0 0 1.447.894c1.565-.782 3.67-2.093 5.398-3.888C20.572 16.213 22 13.852 22 11c0-4.857-4.656-8.5-10-8.5m-3 8.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0m4.25 0a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0m3 1.25a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5"></path>
+    </svg>
+);
+
+const HOSidebarInspirations = ({ width = '1.8rem', height = '1.8rem', className, stylesIcon }) => (
+    <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        role="img"
+        focusable="false"
+        data-icon="lightbulb"
+        aria-hidden="true"
+        will-change="auto"
+        transform="rotate(0)"
+        className={className}
+    >
+        <path d="M11.997 2a7 7 0 0 0-7 7c0 1.959.545 3.126 1.75 4.531l.312.375c.711.829.938 1.281.938 2.094v2a4 4 0 0 0 8 0v-2c0-.813.227-1.265.938-2.094.05-.058.256-.309.312-.375 1.205-1.405 1.75-2.572 1.75-4.531a7 7 0 0 0-7-7m0 2a5 5 0 0 1 5 5c0 1.416-.33 2.145-1.25 3.219-.052.06-.29.312-.344.375-.713.832-1.128 1.58-1.309 2.412-1.268 0-2.929.005-4.197.005-.18-.833-.593-1.585-1.306-2.417-.054-.063-.292-.315-.344-.375-.92-1.074-1.25-1.803-1.25-3.219a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 1 1 0 0 0 2 0 1 1 0 0 1 1-1 1 1 0 0 0 0-2m-2 11h4v1a2 2 0 1 1-4 0z"></path>
+    </svg>
+);
+
+const HOSidebarAcademy = ({ width = '1.8rem', height = '1.8rem', className, stylesIcon }) => (
+    <svg
+        fontSize="18px"
+        width={width}
+        height={height}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="rgba(0,0,0,1)"
+        className={className}
+    >
+        <path d="M3 18.5V5C3 3.34315 4.34315 2 6 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22H6.5C4.567 22 3 20.433 3 18.5ZM19 20V17H6.5C5.67157 17 5 17.6716 5 18.5C5 19.3284 5.67157 20 6.5 20H19ZM10 4H6C5.44772 4 5 4.44772 5 5V15.3368C5.45463 15.1208 5.9632 15 6.5 15H19V4H17V12L13.5 10L10 12V4Z"></path>
+    </svg>
+);
+
+const HOSidebarSound = ({ width = '1.8rem', height = '1.8rem', className, stylesIcon }) => (
+    <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        role="img"
+        focusable="false"
+        data-icon="music"
+        aria-hidden="true"
+        will-change="auto"
+        transform="rotate(0)"
+        className={className}
+    >
+        <path d="m17.841 2.014-6 1c-.482.08-.844.51-.844 1l-.01 10.528a3.83 3.83 0 0 0-1.99-.528 4 4 0 1 0 4 4l.013-9.162 5.137-.87c.114-.018.374-.101.6-.343a.85.85 0 0 0 .25-.625v-4c0-.618-.547-1.102-1.156-1m-.859 2.17.005 1.973-3.99.669.004-1.983zm-7.985 11.83a2 2 0 1 1 .001 3.999 2 2 0 0 1 0-4"></path>
+    </svg>
+);
+
+const HOSidebarFeedBack = ({ width = '1.8rem', height = '1.8rem', className, stylesIcon }) => (
+    <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        role="img"
+        focusable="false"
+        data-icon="envelope"
+        aria-hidden="true"
+        fill="var(--ui-text-2)"
+        will-change="auto"
+        transform="rotate(0)"
+        className={className}
+    >
+        <path d="M6 3.998a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4v-8a4 4 0 0 0-4-4zm0 2h12c1.008 0 1.841.74 1.979 1.71-.958.893-2.382 1.989-3.323 2.665-2.165 1.555-4.07 2.625-4.656 2.625s-2.491-1.07-4.656-2.625a42 42 0 0 1-2.563-2 13 13 0 0 1-.687-.625c.138-.97.898-1.75 1.906-1.75m-1.99 4.354c2.538 2.053 6.257 4.634 7.99 4.646 1.129.008 3.06-1.07 5.03-2.431 1.019-.705 2.153-1.542 2.971-2.23L20 15.998a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path>
+    </svg>
+);
+
+const HOSidebarBack = ({ width = '1.8rem', height = '1.8rem', className, stylesIcon }) => (
+    <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        role="img"
+        focusable="false"
+        data-icon="arrow-left"
+        aria-hidden="true"
+        fill="currentColor"
+        will-change="auto"
+        transform="rotate(0)"
+        className={className}
+    >
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M15.16 5.25a1 1 0 0 1 .09 1.41L10.554 12l4.698 5.34a1 1 0 1 1-1.502 1.32l-4.788-5.442a1.84 1.84 0 0 1 0-2.436l4.788-5.443a1 1 0 0 1 1.412-.09"
+        ></path>
+    </svg>
+);
+
 export {
     UploadIcon,
     MessageIcon,
@@ -1112,4 +1325,15 @@ export {
     SmallLikeIcon,
     CalendarIcon,
     OclockIcon,
+    SidebarUpload,
+    PlusIcon,
+    HOSidebarHome,
+    HOSidebarFolder,
+    HOSidebarAnalytics,
+    HOSidebarComment,
+    HOSidebarInspirations,
+    HOSidebarAcademy,
+    HOSidebarSound,
+    HOSidebarFeedBack,
+    HOSidebarBack,
 };

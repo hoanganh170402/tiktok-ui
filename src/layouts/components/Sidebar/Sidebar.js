@@ -11,6 +11,7 @@ import {
     LiveActiveIcon,
     ExploreIcon,
     ExploreActiveIcon,
+    SidebarUpload,
 } from '~/components/Icons';
 import config from '~/config';
 import SuggestedAccounts from '~/components/SuggestedAccounts';
@@ -58,6 +59,12 @@ function Sidebar() {
                     to={config.routes.following}
                 />
                 <MenuItem title="Live" icon={<LiveIcon />} activeIcon={<LiveActiveIcon />} to={config.routes.live} />
+                <MenuItem
+                    title="Upload"
+                    icon={<SidebarUpload width={24} height={24} stylesIcon={{ marginLeft: 2 }} />}
+                    activeIcon={<SidebarUpload width={24} height={24} stylesIcon={{ marginLeft: 2 }} />}
+                    to={config.routes.upload}
+                />
             </Menu>
 
             <SuggestedAccounts

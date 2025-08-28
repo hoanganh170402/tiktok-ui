@@ -10,8 +10,8 @@
     --text-color: #161823;
     --text-op-color: #161823bf;
     --text-color-blur: #16182380;
+    --text-color-blur-2: #000000a6;
     --text-white-color: #ffffffe6;
-    
 
     --check-color: #20d5ec;
     --separate-color: #e3e3e4;
@@ -28,7 +28,10 @@
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
     --default-layout-horizontal-spacer: 24px;
-    --height-navbar-explore : 74px;
+    --height-navbar-explore: 74px;
+
+    // Header only
+    --HO-sidebar-width: 248px;
 }
 
 * {

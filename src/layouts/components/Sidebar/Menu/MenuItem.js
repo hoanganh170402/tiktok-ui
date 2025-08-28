@@ -4,7 +4,7 @@ import styles from './Menu.module.scss';
 
 const cx = classNames.bind(styles);
 
-function MenuItem({ title, to, icon, activeIcon }) {
+function MenuItem({ title, to, icon, activeIcon, stylesIcon }) {
     return (
         // Khi bạn sử dụng NavLink từ React Router, bạn hoàn toàn có thể truyền một hàm (function) vào cả className và style để tùy chỉnh giao diện dựa trên trạng thái hoạt động của đường dẫn.
         <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to={to}>
