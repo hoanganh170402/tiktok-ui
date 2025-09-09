@@ -4,8 +4,6 @@ import styles from './ContentList.module.scss';
 const cx = classNames.bind(styles);
 
 function ContentList({ list }) {
-    console.log(list);
-
     return (
         <div className={cx('content-list')}>
             {list.map((item, index) => (

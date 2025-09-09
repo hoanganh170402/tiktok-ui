@@ -1,0 +1,91 @@
+.wrapper {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.0784313725);
+    padding: 24px;
+    border-radius: 8px;
+    background-color: var(--white);
+}
+
+// Action Css
+.action-wrapper {
+    width: 100%;
+    height: 460px;
+    border: 1px dashed rgba(0, 0, 0, 0.15);
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    &:hover {
+        background: #0075dc0f;
+        border: 1px dashed #0075dc;
+        cursor: pointer;
+    }
+}
+
+.action {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    & p {
+        line-height: 30px;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--black);
+    }
+    & .title,
+    .file-name {
+        line-height: 18px;
+        font-size: 1.6rem;
+        color: #0000007a;
+    }
+
+    & .file-name {
+        font-weight: 400;
+    }
+}
+
+// Suggest Css
+.suggest-list {
+    display: flex;
+    padding: 32px 0 0;
+    cursor: auto;
+    gap: 16px;
+}
+
+.suggest-item {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    gap: 8px;
+}
+
+.sg-des {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.des-heading {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--black);
+}
+
+.des-text {
+    font-size: 1.2rem;
+    color: #0000007a;
+    font-weight: 500;
+}
