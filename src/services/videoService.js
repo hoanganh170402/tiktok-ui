@@ -11,6 +11,7 @@ const getVideos = async (type, page) => {
         return result.data;
     } catch (error) {
         console.log('Failed to fetch search results:', error);
+        return []; // fallback an toàn
     }
 };
 
