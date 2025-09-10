@@ -15,8 +15,14 @@ function Main() {
 
     useEffect(() => {
         const fetchAPI = async () => {
-            const result = await videoService.getVideos('for-you', 20);
-            setListItems(result);
+            try {
+                const result = await videoService.getVideos('for-you', 20);
+                console.log('API result:', result);
+                setListItems(Array.isArray(result) ? result : []); // luôn là array
+            } catch (error) {
+                console.error('Fetch video error:', error);
+                setListItems([]); // fallback
+            }
         };
         fetchAPI();
     }, []);
@@ -93,9 +99,7 @@ function Main() {
     return (
         <>
             <div ref={containerRef} className={cx('list-container')}>
-                {listItem.map((data) => (
-                    <Video key={data.id} data={data} />
-                ))}
+                {Array.isArray(listItem) && listItem.map((data) => <Video key={data.id} data={data} />)}
             </div>
             <div className={cx('nav-list-btn')}>
                 <button className={cx('nav-btn')} onClick={handlePrev} disabled={currentIndex === 0}>
